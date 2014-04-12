@@ -1,0 +1,4 @@
+# Source all alias files
+source ~/aliases/aliases.git
+source ~/aliases/aliases.rails
+source ~/aliases/aliases.misc

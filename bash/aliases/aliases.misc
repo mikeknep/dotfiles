@@ -1,0 +1,4 @@
+# Misc aliases
+alias sandbox='cd ~/sandbox'
+alias toast='rm -rf ~/sandbox; mkdir ~/sandbox; cd ~/sandbox'
+alias ll='ls -alG'
