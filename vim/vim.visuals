@@ -10,11 +10,26 @@ set background=dark
 
 
 ""
-"" General vim visuals (should get exact definitions for these)
+"" General vim visuals
 ""
+
+" Set width of NERDTree
 let g:NERDTreeWinSize = 26
+
+" Open new split panes to the right
 set splitright
+
+" Vim command line occupies two rows for readability
 set cmdheight=2
+
+" Display line numbers
 set number
+
+" Display cursor location (row, col)
 set ruler
+
+" Display current command at bottom of screen
 set showcmd
+
+" Display extra whitespace
+set list listchars=tab:»·,trail:·
