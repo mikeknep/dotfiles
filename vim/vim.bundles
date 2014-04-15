@@ -21,3 +21,9 @@ Bundle 'guns/vim-clojure-static' " Clojure keyword highlighting
 Bundle 'tpope/vim-fireplace' " ? Quasi-REPL for Clojure
 Bundle 'Raimondi/delimitMate' " Autocomplete parentheses, brackets, etc.
 Bundle 'vim-scripts/tComment' " Toggle comment in/out
+
+
+""
+"" Reset filetype on
+""
+filetype on
