@@ -1,35 +1,67 @@
 " Vim visual settings
 
+
 ""
-"" Color scheme settings
+"" Color syntax
 ""
 syntax on
-let g:gruvbox_italic=0 " Gruvbox theme italicizes comments, but Fira Sans Mono doesn't have an italic, so iTerm2 inverts colors (ugly)
+
+
+""
+"" Gruvbox theme italicizes comments, but Fira Mono doesn't have an italic, so iTerm2 inverts the colors (ugly)
+""
+let g:gruvbox_italic=0
+
+
+""
+"" Use Gruvbox color scheme
+""
 colorscheme gruvbox
+
+
+""
+"" Set background to dark
+""
 set background=dark
 
 
 ""
-"" General vim visuals
+"" Set width of NERDTree
 ""
-
-" Set width of NERDTree
 let g:NERDTreeWinSize = 26
 
-" Open new split panes to the right
+
+""
+"" Open new split panes to the right
+""
 set splitright
 
-" Vim command line occupies two rows for readability
+
+""
+"" Vim command line occupies two rows for readability
+""
 set cmdheight=2
 
-" Display line numbers
+
+""
+"" Display line numbers
+""
 set number
 
-" Display cursor location (row, col)
+
+""
+"" Display cursor location (row, col)
+""
 set ruler
 
-" Display current command at bottom of screen
+
+""
+"" Display current command at bottom of screen
+""
 set showcmd
 
-" Display extra whitespace
+
+""
+"" Display extra whitespace
+""
 set list listchars=tab:»·,trail:·

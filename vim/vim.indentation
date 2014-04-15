@@ -1,12 +1,28 @@
 " Vim indentation settings
 
+
 ""
-"" (Need to get exact definitions of these)
+"" Auto-indent based on keywords
 ""
 set autoindent
+
+
+""
+"" Indent = two spaces
+""
 set shiftwidth=2
-set softtabstop=2
+
+
+""
+"" Tab in insert mode produces appropriate number of spaces
+""
 set expandtab
+set softtabstop=2
+
+
+""
+"" Indent appropriately based on filetype
+""
 filetype plugin indent on
 
 
