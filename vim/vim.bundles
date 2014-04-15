@@ -1,0 +1,23 @@
+" Vim Bundles (using Vundle)
+
+""
+"" Required settings for Vundle
+""
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+
+""
+"" Vundle packages
+""
+Bundle 'gmarik/vundle' " Vundle itself
+Bundle 'kien/ctrlp.vim' " Fuzzy search
+Bundle 'scrooloose/nerdtree' " File directory
+Bundle 'morhetz/gruvbox' " Color scheme
+Bundle 'kien/rainbow_parentheses.vim' " Highlights matching parentheses
+Bundle 'guns/vim-clojure-static' " Clojure keyword highlighting
+Bundle 'tpope/vim-fireplace' " ? Quasi-REPL for Clojure
+Bundle 'Raimondi/delimitMate' " Autocomplete parentheses, brackets, etc.
+Bundle 'vim-scripts/tComment' " Toggle comment in/out

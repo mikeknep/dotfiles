@@ -1,0 +1,20 @@
+" Vim visual settings
+
+""
+"" Color scheme settings
+""
+syntax on
+let g:gruvbox_italic=0 " Gruvbox theme italicizes comments, but Fira Sans Mono doesn't have an italic, so iTerm2 inverts colors (ugly)
+colorscheme gruvbox
+set background=dark
+
+
+""
+"" General vim visuals (should get exact definitions for these)
+""
+let g:NERDTreeWinSize = 26
+set splitright
+set cmdheight=2
+set number
+set ruler
+set showcmd

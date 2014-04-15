@@ -1,0 +1,16 @@
+" Vim indentation settings
+
+""
+"" (Need to get exact definitions of these)
+""
+set autoindent
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+filetype plugin indent on
+
+
+""
+"" Add keywords to fix Clojure indentation (esp. in Speclj)
+""
+autocmd FileType clojure setlocal lispwords+=describe,it,context,around,should=,should-not=,should,should-not,should-be,with,run-specs

@@ -1,0 +1,31 @@
+" Vim search options
+
+
+""
+"" (Need to get exact definitions of these)
+""
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+
+""
+"" Interpret spaces as underscores when searching with ctrl-p
+""
+let g:ctrlp_abbrev = {
+    \ 'gmode': 't',
+    \ 'abbrevs': [
+        \ {
+        \ 'pattern': '\(^@.\+\|\\\@<!:.\+\)\@<! ',
+        \ 'expanded': '_',
+        \ 'mode': 'pfrz',
+        \ },
+        \ ]
+    \ }
+
+
+""
+"" When searching in ctrl-p and opening a file that is already open somewhere, jump to it instead of re-opening
+""
+let g:ctrlp_switch_buffer = 'ETVH'
