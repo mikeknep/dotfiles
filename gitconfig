@@ -1,0 +1,9 @@
+[user]
+        name = Mike Knepper
+        email = michaelrknepper@gmail.com
+[push]
+        default = simple
+[color]
+        diff = true
+[core]
+        excludesfile = ~/.gitignore
