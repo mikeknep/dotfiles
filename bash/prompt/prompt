@@ -12,11 +12,13 @@ function when_failed() {
   return $ret_val
 }
 
+
 ##
 ## Displays git info in prompt
 ##
 alias vcbranch="vcprompt -f '%b'"
 alias vcinfo="vcprompt -f '%m%u%a'"
+
 
 ##
 ## The prompt (two-liner, example below)
