@@ -12,3 +12,9 @@ set confirm
 ""
 set nostartofline
 set backspace=indent,eol,start
+
+
+""
+"" Trim trailing whitespace on save
+""
+autocmd BufWritePre *.* :%s/\s\+$//e
