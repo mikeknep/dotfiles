@@ -1,11 +1,30 @@
 # Bash functions
 
 ##
-## Opens project's todo file (arg1 = alias to project directory)
+## Java server functions
 ##
-todo () {
-$1
-open TODO.md
+dahomey() {
+  if [ $# -eq 0 ]
+  then
+    cd ~/8thlight/dahomey/
+
+  elif [ $1 = "jar" ]
+  then
+    jar cfmv dahomey.jar ~/8thlight/dahomey/manifest-additions.txt -C ~/8thlight/dahomey/out/production/dahomey/ .
+
+  elif [ $1 = "start" ]
+  then
+    java -jar dahomey.jar $*
+
+  elif [ $1 = "dance" ]
+  then
+    dahomey jar
+    dahomey start
+
+  else
+    echo "Invalid option. Valid options are: 'jar' to jar, 'start' to run jar, 'dance' to jar and run, or (nothing) to cd to directory"
+
+  fi
 }
 
 
