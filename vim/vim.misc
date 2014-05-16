@@ -1,20 +1,14 @@
 " Miscellaneous vim settings
 
 
-""
 "" Alert when doing something that might be stupid
-""
 set confirm
 
 
-""
 "" Movement
-""
 set nostartofline
 set backspace=indent,eol,start
 
 
-""
 "" Trim trailing whitespace on save
-""
 autocmd BufWritePre *.* :%s/\s\+$//e
