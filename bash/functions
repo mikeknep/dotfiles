@@ -13,12 +13,12 @@ dahomey() {
 
   elif [ $1 = "start" ]
   then
-    java -jar dahomey.jar $*
+    java -jar dahomey.jar ${*:2}
 
   elif [ $1 = "dance" ]
   then
     dahomey jar
-    dahomey start
+    dahomey start ${*:2}
 
   else
     echo "Invalid option. Valid options are: 'jar' to jar, 'start' to run jar, 'dance' to jar and run, or (nothing) to cd to directory"
