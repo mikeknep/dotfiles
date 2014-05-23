@@ -1,7 +1,7 @@
 " Source all Vim files
-source ~/vim/vim.bundles
-source ~/vim/vim.indentation
-source ~/vim/vim.key_mappings
-source ~/vim/vim.search
-source ~/vim/vim.visuals
-source ~/vim/vim.misc
+source ~/dotfiles/vim/vim.bundles
+source ~/dotfiles/vim/vim.indentation
+source ~/dotfiles/vim/vim.key_mappings
+source ~/dotfiles/vim/vim.search
+source ~/dotfiles/vim/vim.visuals
+source ~/dotfiles/vim/vim.misc
