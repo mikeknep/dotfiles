@@ -2,7 +2,7 @@
 
 I've been convinced. Dotfiles must be treated as first-class citizens. So, here are mine.
 
-## Content
+## Contents
 
 **Bash**
 - Easier color codes (useful for customizing prompt)
