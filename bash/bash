@@ -1,0 +1,8 @@
+# Source all bash files
+source ~/dotfiles/bash/bash.colors
+source ~/dotfiles/bash/bash.aliases
+source ~/dotfiles/bash/bash.functions
+source ~/dotfiles/bash/bash.prompt
+
+## Source all secret bash files
+for f in ~/dotfiles/bash/secret; do source $f; done
