@@ -7,4 +7,4 @@ source ~/dotfiles/bash/bash.prompt
 source ~/dotfiles/bash/bash.rvm
 
 ## Source all secret bash files
-for f in ~/dotfiles/bash/secret; do source $f; done
+for f in ~/dotfiles/bash/secret/*; do source $f; done
