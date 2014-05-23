@@ -13,15 +13,33 @@ call vundle#rc()
 ""
 "" Vundle packages
 ""
-Bundle 'gmarik/vundle'                    " Vundle itself
-Bundle 'kien/ctrlp.vim'                   " Fuzzy search
-Bundle 'scrooloose/nerdtree'              " File directory
-Bundle 'morhetz/gruvbox'                  " Color scheme
-Bundle 'kien/rainbow_parentheses.vim'     " Highlights matching parentheses
-Bundle 'guns/vim-clojure-static'          " Clojure keyword highlighting
-Bundle 'tpope/vim-fireplace'              " ? Quasi-REPL for Clojure
-Bundle 'Raimondi/delimitMate'             " Autocomplete parentheses, brackets, etc.
-Bundle 'vim-scripts/tComment'             " Toggle comment in/out
+
+" Vundle itself
+Bundle 'gmarik/vundle'
+
+" Fuzzy search
+Bundle 'kien/ctrlp.vim'
+
+" File directory
+Bundle 'scrooloose/nerdtree'
+
+" Color scheme
+Bundle 'morhetz/gruvbox'
+
+" Highlight matching parentheses
+Bundle 'kien/rainbow_parentheses.vim'
+
+" Clojure keyword highlighting
+Bundle 'guns/vim-clojure-static'
+
+" ? Quasi-REPL for Clojure
+Bundle 'tpope/vim-fireplace'
+
+" Autocomplete parens, brakets, etc.
+Bundle 'Raimondi/delimitMate'
+
+" Toggle comment
+Bundle 'vim-scripts/tComment'
 
 
 ""
