@@ -6,5 +6,5 @@
 [color]
         diff = true
 [core]
-        excludesfile = ~/.gitignore
+        excludesfile = ~/dotfiles/git/gitignore
         editor = vim
