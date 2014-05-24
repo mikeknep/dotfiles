@@ -11,7 +11,7 @@ alias gcm='git commit -m'
 alias gcv='git commit -v'
 alias grh='git reset --hard'
 alias gco='git checkout'
-alias gl='git log --oneline'
+alias gl='git log --format="%C(magenta)%h%Creset %s %C(green)(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset" --no-merges'
 alias gd='git diff'
 alias gb='git branch'
 
