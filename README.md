@@ -55,6 +55,11 @@ For each group of settings (bash, vim, rspec, git), the setup script will:
 **CAUTION 2**: This script is currently all or nothing--you can't "opt in" to, say, my vim and rspec settings but keep your bash and git settings. I will improve the script soon to allow picking and choosing of different groups.
 
 
+## Re: Vundle Bundles
+
+I use [Vundle](https://github.com/gmarik/Vundle.vim) to manage my vim plugins. However, it looks like gmarik has slightly changed some config settings since I cloned it down and began using it. If you run my setup script and experience problems with the Vundle plugins, take a look at Vundle's README and adjust `~/dotfiles/vim/vim.bundles` as needed (hint: it probably has to do with the runtime path and/or the `call vundle#begin()`/`call vundle#end()` commands).
+
+
 ## Secrets
 
 If you have bash environment variables that need to be kept secret, create a "secret" directory in the bash directory (`mkdir ~/dotfiles/bash/secret`) and add any files you need there. Your .bashrc will source these files, but they will not be tracked by git. (See `~/dotfiles/.gitignore` and `~/dotfiles/bash/bash`.)
