@@ -39,3 +39,6 @@ alias toast='rm -rf ~/sandbox; mkdir ~/sandbox; cd ~/sandbox'
 
 ### Improve directory list output
 alias ll='ls -AFGgohl'
+
+### Move blog posts from _drafts folder to _posts folder (and add date)
+alias publish='ruby publish.rb'
