@@ -1,5 +1,3 @@
-#!/bin/bash
-
 echo "          _       _    __ _ _ "
 echo "       __| | ___ | |_ / _(_) | ___  ___ "
 echo "      / _  |/ _ \| __| |_| | |/ _ \/ __| "
@@ -23,7 +21,11 @@ echo " "
 echo "Thanks for cloning down my dotfiles!"
 echo "I hope you enjoy these settings."
 echo
-echo "This script will walk through each group of settings (bash, vim, rspec, and git) to check if you have an existing config file. If you do, you will have the option of 'archiving' it (renaming it with the suffix '_old') or permanently deleting it. The script will then create a symlink pointing to the appropriate file in this dotfiles directory/repository."
+echo "This script will walk through each group of settings (bash, vim, rspec, and git) to check if you have an existing config file for that group. If you do, you will have three options:"
+echo "  1. Keep using your existing config file and don't hook up to the dotfiles' settings for that group"
+echo "  2. Archive your existing config file (renaming it with the suffix '_old') and hooking up to the dotfiles' settings for that group"
+echo "  3. Delete your existing config file and hook up to the dotfiles' settings for that group"
+echo "Assuming you choose option 2 or 3, the script will create a symlink pointing the requisite system file to the appropriate file in the dotfiles directory."
 echo
 echo "So without further ado, let's get started!"
 echo
@@ -31,209 +33,83 @@ echo
 
 
 
-echo "##"
-echo "## BASH"
-echo "##"
-echo
-echo "Looking for existing .bashrc file..."
-if [ -f ~/.bashrc ]
-then
-  echo "Found existing .bashrc file. Do you want to (a)rchive it, or (d)elete it?"
-  echo "Warning! (d) will *permanently delete* this file!"
-  for (( ; ; ))
-  do
-    read decision
-    if [ "$decision" = "a" ]
-    then
-      echo "Archiving existing .bashrc file as .bashrc_old..."
-      mv ~/.bashrc ~/.bashrc_old
-      echo "Existing .bashrc file successfully archived as ~/.bashrc_old."
-      break
-    elif [ "$decision" = "d" ]
-    then
-      echo "DANGER! Are you sure you want to delete your existing .bashrc file? If so, type 'delete'."
-      for (( ; ; ))
-      do
-        read confirm
-        if [ "$confirm" = "delete" ]
-        then
-          echo "Deleting existing .bashrc file..."
-          rm ~/.bashrc
-          echo "Existing .bashrc file deleted."
-          break 2
-        else
-          echo "You're lucky I'm nice. Now, I'll ask again: do you want to (a)rchive your existing .bashrc file, or (d)elete it?"
-          break
-        fi
-      done
-    else
-      echo "That is not a valid input. Please decide whether you want to (a)rchive the existing .bashrc file or (d)elete it permanently."
-    fi
-  done
-else
-  echo "No existing .bashrc found."
-fi
-echo
+declare -A configs=( ["bash"]=".bashrc" ["vim"]=".vimrc" ["rspec"]=".rspec" ["git"]=".gitconfig" )
 
-echo "Creating symlink to dotfiles' bash settings..."
-ln -s ~/dotfiles/bash/bash ~/.bashrc
-echo "Symlink created successfully!"
-echo
-echo
+for groupname in "${!configs[@]}"
+do
+  filename="${configs["$groupname"]}"
+  suffix="_old"
+  archive_filename=$filename$suffix
 
+  echo "##"
+  echo "## ${groupname^^}"
+  echo "##"
+  echo
 
+  echo "Looking for existing $filename file..."
+  if [ -f ~/$filename ]
+  then
+    echo "Existing $filename file found. What would you like to do?"
+    echo "  (k)eep using the existing $filename file and ignore the $groupname settings in the dotfiles repo"
+    echo "  (a)rchive the existing $filename file, but start using the $groupname settings in the dotfiles repo"
+    echo "  (d)elete the existing $filename file and start using the $groupname settings in the dotfiles repo"
+    echo "     Warning! This will *permanently delete* the existing $filename file!"
 
-echo "##"
-echo "## VIM"
-echo "##"
-echo
-echo "Looking for existing .vimrc file..."
-if [ -f ~/.vimrc ]
-then
-  echo "Found existing .vimrc file. Do you want to (a)rchive it, or (d)elete it?"
-  echo "Warning! (d) will *permanently delete* this file!"
-  for (( ; ; ))
-  do
-    read decision
-    if [ "$decision" = "a" ]
-    then
-      echo "Archiving existing .vimrc file as .vimrc_old..."
-      mv ~/.vimrc ~/.vimrc_old
-      echo "Existing .vimrc file successfully archived as ~/.vimrc_old."
-      break
-    elif [ "$decision" = "d" ]
-    then
-      echo "DANGER! Are you sure you want to delete your existing .vimrc file? If so, type 'delete'."
-      for (( ; ; ))
-      do
-        read confirm
-        if [ "$confirm" = "delete" ]
-        then
-          echo "Deleting existing .vimrc file..."
-          rm ~/.vimrc
-          echo "Existing .vimrc file deleted."
-          break 2
-        else
-          echo "You're lucky I'm nice. Now, I'll ask again: do you want to (a)rchive your existing .vimrc file, or (d)elete it?"
-          break
-        fi
-      done
-    else
-      echo "That is not a valid input. Please decide whether you want to (a)rchive the existing .vimrc file or (d)elete it permanently."
-    fi
-  done
-else
-  echo "No existing .vimrc found."
-fi
-echo
+    for (( ; ; ))
+    do
+      read decision
 
-echo "Creating symlink to dotfiles' vim settings..."
-ln -s ~/dotfiles/vim/vim ~/.vimrc
-echo "Symlink created successfully!"
-echo
-echo
+      if [ "${decision,,}" = "k" ]
+      then
+        echo "Keeping existing $filename file in place."
 
+      elif [ "${decision,,}" = "a" ]
+      then
+        echo "Archiving existing $filename file..."
+        mv ~/$filename ~/$archive_filename
+        echo "Existing $filename file successfully archived."
 
+      elif [ "${decision,,}" = "d" ]
+      then
+        echo "DANGER! Are you sure you want to permanently delete your existing $filename file? Type 'delete' to confirm."
+        for (( ; ; ))
+        do
+          read confirm
+          if [ "$confirm" = "delete" ]
+          then
+            echo "Deleting existing $filename file..."
+            rm ~/$filename
+            echo "Original $filename file successfully deleted."
+            break 2
+          else
+            echo "Aborted delete. Do you want to (k)eep using your existing $filename file or (a)rchive it and use the dotfiles' $groupname settings?"
+            break
+          fi
+        done
 
-echo "##"
-echo "## RSPEC"
-echo "##"
-echo "Looking for existing .rspec file..."
-if [ -f ~/.rspec ]
-then
-  echo "Found existing .rspec file. Do you want to (a)rchive it, or (d)elete it?"
-  echo "Warning! (d) will *permanently delete* this file!"
-  for (( ; ; ))
-  do
-    read decision
-    if [ "$decision" = "a" ]
-    then
-      echo "Archiving existing .rspec file as .rspec_old..."
-      mv ~/.rspec ~/.rspec_old
-      echo "Existing .rspec file successfully archived as ~/.rspec_old."
-      break
-    elif [ "$decision" = "d" ]
-    then
-      echo "DANGER! Are you sure you want to delete your existing .rspec file? If so, type 'delete'."
-      for (( ; ; ))
-      do
-        read confirm
-        if [ "$confirm" = "delete" ]
-        then
-          echo "Deleting existing .rspec file..."
-          rm ~/.rspec
-          echo "Existing .rspec file deleted."
-          break 2
-        else
-          echo "You're lucky I'm nice. Now, I'll ask again: do you want to (a)rchive your existing .rspec file, or (d)elete it?"
-          break
-        fi
-      done
-    else
-      echo "That is not a valid input. Please decide whether you want to (a)rchive the existing .rspec file or (d)elete it permanently."
-    fi
-  done
-else
-  echo "No existing .rspec found."
-fi
-echo
+      else
+        echo "That is not a valid input. Please decide whether you want to:"
+        echo "  (k)eep using your existing $filename file,"
+        echo "  (a)rchive your existing $filename file and start using the $groupname settings in the dotfiles repo, or"
+        echo "  (d)elete your existing $filename file and start using the $groupname settings in the dotfiles repo."
+      fi
+    done
 
-echo "Creating symlink to dotfiles' rspec settings..."
-ln -s ~/dotfiles/rspec/rspec ~/.rspec
-echo "Symlink created successfully!"
-echo
-echo
+  else
+    echo "Did not find existing $filename file."
+  fi
+  echo
 
+  if [ "${decision,,}" != "k" ]
+  then
+    echo "Creating symlink to dotfiles' $groupname settings..."
+    ln -s ~/dotfiles/$groupname/$groupname ~/$filename
+    echo "Symlink created successfully! You are now using the dotfiles' $groupname settings."
+  fi
 
-
-echo "##"
-echo "## GIT"
-echo "##"
-echo "Looking for existing .gitconfig file..."
-if [ -f ~/.gitconfig ]
-then
-  echo "Found existing .gitconfig file. Do you want to (a)rchive it, or (d)elete it?"
-  echo "Warning! (d) will *permanently delete* this file!"
-  for (( ; ; ))
-  do
-    read decision
-    if [ "$decision" = "a" ]
-    then
-      echo "Archiving existing .gitconfig file as .gitconfig_old..."
-      mv ~/.gitconfig ~/.gitconfig_old
-      echo "Existing .gitconfig file successfully archived as ~/.gitconfig_old."
-      break
-    elif [ "$decision" = "d" ]
-    then
-      echo "DANGER! Are you sure you want to delete your existing .gitconfig file? If so, type 'delete'."
-      for (( ; ; ))
-      do
-        read confirm
-        if [ "$confirm" = "delete" ]
-        then
-          echo "Deleting existing .gitconfig file..."
-          rm ~/.gitconfig
-          echo "Existing .gitconfig file deleted."
-          break 2
-        else
-          echo "You're lucky I'm nice. Now, I'll ask again: do you want to (a)rchive your existing .gitconfig file, or (d)elete it?"
-          break
-        fi
-      done
-    else
-      echo "That is not a valid input. Please decide whether you want to (a)rchive the existing .gitconfig file or (d)elete it permanently."
-    fi
-  done
-else
-  echo "No existing .gitconfig found."
-fi
-echo
-
-echo "Creating symlink to dotfiles' gitconfig settings..."
-ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
-echo "Symlink created successfully!"
-echo
-echo
+  echo
+  echo
+done
 
 
 
