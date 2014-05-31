@@ -32,25 +32,25 @@ I've written a bash script to simplify creating this setup on your computer (or 
 
 ### Preliminary notes
 
-#### Bash 4.x
+#### Bash 4.x required!
 
 This script requires Bash 4.x. Unfortunately, Mac OSX ships with Bash 3.x. However, upgrading to Bash 4.x isn't too difficult:
 
 1. Install the latest bash using homebrew: `brew install bash`
-2. Add the brewed bash to your list of accepted shells by adding the line "/usr/local/bin/bash" to `/etc/shells`
+2. Add the brewed bash to your list of accepted shells: `echo /usr/local/bin/bash >> /etc/shells`
 3. Change your shell: `chsh -s /usr/local/bin/bash`
 
 You may have to restart your terminal. To confirm you're now on Bash 4.x, run `echo $BASH_VERSION`.
 
 #### Behavior
 
-The script progresses group by group. You do not need to hook up to the dotfiles' settings for all groups--for example, if you want to keep your existing bashrc and git settings but start using the repo's vim and rspec options, you can do that.
+- The script progresses group by group. You do not need to hook up to the dotfiles' settings for all groups--for example, if you want to keep your existing bash and git configuration but start using the repo's vim and rspec settings, you can do that.
 
-Archiving a file simply appends a suffix to the filename. It remains in the home directory.
+- Archiving a file simply appends the suffix "old" to the filename. It remains in the home directory.
 
-Deleting an existing config file is **permanent**. I've added as much safety into the script as I can without being absolutely unbearable for people who do legitimately want to delete existing files, so don't claim you were caught off guard.
+- Deleting an existing config file is **permanent**. I've added as much safety into the script as I can without being absolutely unbearable for people who do legitimately want to delete existing files, so don't claim you were caught off guard.
 
-If no existing config file is found, the script assumes you want to start using the settings in the dotfiles.
+- If no existing config file is found, the script assumes you want to start using the settings in the dotfiles.
 
 ### OK, let's do this!
 
