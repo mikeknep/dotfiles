@@ -62,12 +62,14 @@ do
       if [ "${decision,,}" = "k" ]
       then
         echo "Keeping existing $filename file in place."
+        break
 
       elif [ "${decision,,}" = "a" ]
       then
         echo "Archiving existing $filename file..."
         mv ~/$filename ~/$archive_filename
         echo "Existing $filename file successfully archived."
+        break
 
       elif [ "${decision,,}" = "d" ]
       then
