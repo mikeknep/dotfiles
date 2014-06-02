@@ -9,7 +9,7 @@ dahomey() {
 
   elif [ $1 = "jar" ]
   then
-    jar cfmv dahomey.jar ~/8thlight/dahomey/manifest-additions.txt -C ~/8thlight/dahomey/out/production/dahomey/ .
+    jar cfmv dahomey.jar ~/8thlight/dahomey/src/META-INF/MANIFEST.MF -C ~/8thlight/dahomey/out/production/dahomey/ .
 
   elif [ $1 = "start" ]
   then
@@ -44,4 +44,13 @@ describe Something do
   it "does something"
 end
 EOF
+}
+
+
+## Navigating up directories
+up () {
+  for i in $(seq $1)
+  do
+    cd ..
+  done
 }
