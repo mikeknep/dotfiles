@@ -20,6 +20,21 @@ dahomey() {
     dahomey jar
     dahomey start ${*:2}
 
+  elif [ $1 = "cobspec" ]
+  then
+    dahomey jar
+    runcobspec="nohup java -jar fitnesse.jar -p 9090"
+    rundahomey="nohup java -jar dahomey.jar -p 5000 -d /Users/mrk/8thlight/cob_spec/public/ -a /Users/mrk/8thlight/dahomey/public/mock.jar"
+    $rundahomey &
+    dahomeyprocess=$!
+    cd ~/8thlight/cob_spec/
+    $runcobspec &
+    cobspecprocess=$!
+    read exit
+    kill $dahomeyprocess
+    kill $cobspecprocess
+    rm ~/8thlight/cob_spec/nohup.out
+
   else
     echo "Invalid option. Valid options are: 'jar' to jar, 'start' to run jar, 'dance' to jar and run, or (nothing) to cd to directory"
 
@@ -49,8 +64,13 @@ EOF
 
 ## Navigating up directories
 up () {
-  for i in $(seq $1)
-  do
+  if [ $# -eq 0 ]
+  then
     cd ..
-  done
+  else
+    for i in $(seq $1)
+    do
+      cd ..
+    done
+  fi
 }
