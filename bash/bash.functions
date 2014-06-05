@@ -22,18 +22,27 @@ dahomey() {
 
   elif [ $1 = "cobspec" ]
   then
+    cd ~/Desktop/dahomey
+    jar cfmv router.jar ~/8thlight/basic_router/src/META-INF/MANIFEST.MF -C ~/8thlight/basic_router/out/production/basic_router/ .
     dahomey jar
     runcobspec="nohup java -jar fitnesse.jar -p 9090"
-    rundahomey="nohup java -jar dahomey.jar -p 5000 -d /Users/mrk/8thlight/cob_spec/public/ -a /Users/mrk/8thlight/dahomey/public/mock.jar"
+    rundahomey="nohup java -jar dahomey.jar -p 5000 -d /Users/mrk/8thlight/cob_spec/public/ -a /Users/mrk/Desktop/dahomey/router.jar"
     $rundahomey &
     dahomeyprocess=$!
     cd ~/8thlight/cob_spec/
     $runcobspec &
     cobspecprocess=$!
-    read exit
+    for (( ; ; ))
+    do
+      read exit
+      if [ "$exit" = "exit"]
+      then
+        break
+      fi
+    done
     kill $dahomeyprocess
     kill $cobspecprocess
-    rm ~/8thlight/cob_spec/nohup.out
+    rm ~/8thlight/cob_spec/nohup.out ~/Desktop/dahomey/dahomey.jar ~/Desktop/dahomey/router.jar
 
   else
     echo "Invalid option. Valid options are: 'jar' to jar, 'start' to run jar, 'dance' to jar and run, or (nothing) to cd to directory"
