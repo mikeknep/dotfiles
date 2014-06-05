@@ -35,7 +35,7 @@ dahomey() {
     for (( ; ; ))
     do
       read exit
-      if [ "$exit" = "exit"]
+      if [ "$exit" = "exit" ]
       then
         break
       fi
