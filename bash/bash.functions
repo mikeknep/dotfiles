@@ -15,6 +15,10 @@ dahomey() {
   then
     java -jar dahomey.jar ${*:2}
 
+  elif [ $1 = "router" ]
+  then
+    jar cfmv router.jar ~/8thlight/basic_router/src/META-INF/MANIFEST.MF -C ~/8thlight/basic_router/out/production/basic_router/ .
+
   elif [ $1 = "dance" ]
   then
     dahomey jar
@@ -23,7 +27,7 @@ dahomey() {
   elif [ $1 = "cobspec" ]
   then
     cd ~/Desktop/dahomey
-    jar cfmv router.jar ~/8thlight/basic_router/src/META-INF/MANIFEST.MF -C ~/8thlight/basic_router/out/production/basic_router/ .
+    dahomey router
     dahomey jar
     runcobspec="nohup java -jar fitnesse.jar -p 9090"
     rundahomey="nohup java -jar dahomey.jar -p 5000 -d /Users/mrk/8thlight/cob_spec/public/ -a /Users/mrk/Desktop/dahomey/router.jar"
