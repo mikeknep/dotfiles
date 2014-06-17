@@ -88,3 +88,11 @@ up () {
     done
   fi
 }
+
+
+## Go to repo on GitHub
+gh() {
+  local giturl=$(grep -o -m 1 'git@.*' .git/config)
+  giturl=${giturl/git\@github\.com\:/https://github.com/}
+  open $giturl
+}
