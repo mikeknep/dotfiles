@@ -34,6 +34,9 @@ alias be='bundle exec'
 
 
 ## Misc
+### Get to work!
+alias v='vim'
+
 ### Destroy sandbox, recreate it, and navigate to it
 alias toast='rm -rf ~/sandbox; mkdir ~/sandbox; cd ~/sandbox'
 
