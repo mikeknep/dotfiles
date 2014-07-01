@@ -1,0 +1,6 @@
+# Rails aliases
+
+alias rc='rails console'
+alias rs='rails s'
+alias migrate='rake db:migrate; rake db:test:prepare'
+alias be='bundle exec'

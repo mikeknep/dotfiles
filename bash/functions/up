@@ -1,0 +1,15 @@
+# up
+
+## Navigate up multiple directories
+
+up () {
+  if [ $# -eq 0 ]
+  then
+    cd ..
+  else
+    for i in $(seq $1)
+    do
+      cd ..
+    done
+  fi
+}

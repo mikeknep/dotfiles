@@ -1,7 +1,7 @@
-# Funtions
+# Dahomey
 
+## My Java HTTP server
 
-## Java server
 dahomey() {
   if [ $# -eq 0 ]
   then
@@ -50,49 +50,13 @@ dahomey() {
     cd ~/Desktop/dahomey/
 
   else
-    echo "Invalid option. Valid options are: 'jar' to jar, 'start' to run jar, 'dance' to jar and run, or (nothing) to cd to directory"
+    echo "Invalid option. Valid options are:"
+    echo "'jar' to jar up project"
+    echo "'start' to run existing and specified jar"
+    echo "'dance' to jar and run"
+    echo "'router' to jar up CobSpec router app"
+    echo "'cobspec' to run CobSpec on port 9090 and Dahomey on 5000 using CobSpec router" 
+    echo "(nothing) to cd to directory"
 
   fi
-}
-
-
-## Generate skeleton for new ruby project (arg1 = project name)
-rubynew () {
-mkdir $1 $1/lib $1/spec
-
-cat >$1/spec/spec_helper.rb <<EOF
-require 'rspec'
-
-Dir["./lib/*.rb"].each { |file| require file }
-EOF
-
-cat >$1/spec/_spec.rb <<EOF
-require 'spec_helper'
-
-describe Something do
-  it "does something"
-end
-EOF
-}
-
-
-## Navigating up directories
-up () {
-  if [ $# -eq 0 ]
-  then
-    cd ..
-  else
-    for i in $(seq $1)
-    do
-      cd ..
-    done
-  fi
-}
-
-
-## Go to repo on GitHub
-gh() {
-  local giturl=$(grep -o -m 1 'git@.*' .git/config)
-  giturl=${giturl/git\@github\.com\:/https://github.com/}
-  open $giturl
 }
