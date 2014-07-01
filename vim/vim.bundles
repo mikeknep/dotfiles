@@ -6,8 +6,8 @@
 ""
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 
 ""
@@ -15,34 +15,35 @@ call vundle#rc()
 ""
 
 " Vundle itself
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle.vim'
 
 " Fuzzy search
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 
 " File directory
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 
 " Color scheme
-Bundle 'morhetz/gruvbox'
+Plugin 'morhetz/gruvbox'
 
 " Highlight matching parentheses
-Bundle 'kien/rainbow_parentheses.vim'
+Plugin 'kien/rainbow_parentheses.vim'
 
 " Clojure keyword highlighting
-Bundle 'guns/vim-clojure-static'
+Plugin 'guns/vim-clojure-static'
 
 " ? Quasi-REPL for Clojure
-Bundle 'tpope/vim-fireplace'
+Plugin 'tpope/vim-fireplace'
 
 " Autocomplete parens, brakets, etc.
-Bundle 'Raimondi/delimitMate'
+Plugin 'Raimondi/delimitMate'
 
 " Toggle comment
-Bundle 'vim-scripts/tComment'
+Plugin 'vim-scripts/tComment'
 
 
 ""
-"" Reset filetype on
+"" End vundle and reset filetype on
 ""
+call vundle#end()
 filetype on

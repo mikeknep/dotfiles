@@ -72,10 +72,6 @@ Finally, run the setup script:
 $ ~/dotfiles/setup.sh
 ```
 
-### Re: Vundle Bundles
-
-I use [Vundle](https://github.com/gmarik/Vundle.vim) to manage my vim plugins. However, it looks like gmarik has slightly changed some config settings since I cloned it down and began using it. If you run my setup script and experience problems with the Vundle plugins, take a look at Vundle's README and adjust `~/dotfiles/vim/vim.bundles` as needed (hint: it probably has to do with the runtime path and/or the `call vundle#begin()`/`call vundle#end()` commands).
-
 
 ### Secrets
 
