@@ -1,18 +1,11 @@
-" Vim Bundles (using Vundle)
-
-
-""
-"" Required settings for Vundle
-""
+" Required startup settings for Vundle
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 
-""
-"" Vundle packages
-""
+" Vundle plugins
 
 " Vundle itself
 Plugin 'gmarik/vundle.vim'
@@ -26,24 +19,25 @@ Plugin 'scrooloose/nerdtree'
 " Color scheme
 Plugin 'morhetz/gruvbox'
 
+" Coffeescript syntax awareness
+Plugin 'kchmck/vim-coffee-script'
+
 " Highlight matching parentheses
 Plugin 'kien/rainbow_parentheses.vim'
 
 " Clojure keyword highlighting
 Plugin 'guns/vim-clojure-static'
 
-" ? Quasi-REPL for Clojure
+" Quasi-REPL for Clojure
 Plugin 'tpope/vim-fireplace'
 
-" Autocomplete parens, brakets, etc.
+" Autocomplete parens, brackets, etc.
 Plugin 'Raimondi/delimitMate'
 
 " Toggle comment
 Plugin 'vim-scripts/tComment'
 
 
-""
-"" End vundle and reset filetype on
-""
+" End vundle and reset filetype on
 call vundle#end()
 filetype on

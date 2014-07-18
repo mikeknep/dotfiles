@@ -1,7 +1,18 @@
-" Source all Vim files
-source ~/dotfiles/vim/vim.bundles
-source ~/dotfiles/vim/vim.indentation
-source ~/dotfiles/vim/vim.key_mappings
-source ~/dotfiles/vim/vim.search
-source ~/dotfiles/vim/vim.visuals
-source ~/dotfiles/vim/vim.misc
+" Source global Vim files
+source ~/dotfiles/vim/bundles.vim
+source ~/dotfiles/vim/settings.vim
+source ~/dotfiles/vim/key_mappings.vim
+
+
+" Source edits to Vundle plugins
+for file in split(globpath('~/dotfiles/vim/plugin_edits/', '*.vim'), '\n')
+  exe 'source ' file
+endfor
+
+
+" Source language-specific settings
+for filepath in split(globpath('~/dotfiles/vim/filetypes/', '*.vim'), '\n')
+  let filename = split(filepath, '/')[-1]
+  let filetype = split(filename, '\V.')[0]
+  exe 'au BufRead,BufNewFile *.' . filetype . ' source ' . filepath
+endfor
