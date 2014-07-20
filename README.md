@@ -5,18 +5,18 @@ I've been convinced. Dotfiles must be treated as first-class citizens. So, here 
 ## Groups
 
 **Bash**
-- Easier color codes (useful for customizing prompt)
+- Simplified color code constants (useful for customizing prompt)
 - Aliases (git, navigation, rails, misc)
-- Functions (java, ruby)
-- My prompt (a two-liner with current dir, git branch and status, sad face, and nice colors)
+- Functions (some specific to personal projects, others more widely applicable)
+- My prompt (a two-liner with current dir, git branch and status, sad face when errors, and nice colors)
+- Option for sourcing sensitive data (see "Secrets" below)
 
 **Vim**
-- The bundles I use (via Vundle)
+- Vundle plugins
+- General settings (visuals, searching, indentation, etc.)
 - Key mappings
-- Searching
-- Indentation
-- Visuals
-- Misc
+- Directory for edits to specific plugins
+- Directory for filetype-specific settings
 
 **Git**
 - Nothing fancy--global gitignore, use vim as default editor, etc.
