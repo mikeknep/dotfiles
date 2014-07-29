@@ -17,7 +17,6 @@ colorscheme gruvbox
 let g:gruvbox_italic=0
 set background=dark
 set splitright
-set cmdheight=2
 set number
 set ruler
 set showcmd
