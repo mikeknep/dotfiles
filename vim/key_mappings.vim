@@ -13,3 +13,6 @@ map <C-l> :tabn<CR>
 
 " Ctrl-n for new tab
 map <C-n> :tabnew<CR>
+
+" Ctrl-f for find/replace
+map <C-f><C-r> :%s/
