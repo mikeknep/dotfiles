@@ -9,3 +9,6 @@ setlocal lispwords+=describe,it,context,around,should=,should-not=,should,should
 
 " Run lein spec ASAP
 nnoremap <Leader>t :!lein spec<CR>
+
+" Print out YOLO
+command! YOLO :normal o(println "YOLO")<ESC>
