@@ -37,6 +37,9 @@ Plugin 'Raimondi/delimitMate'
 " Toggle comment
 Plugin 'vim-scripts/tComment'
 
+" Navigate between vim and tmux seamlessly
+Plugin 'christoomey/vim-tmux-navigator'
+
 
 " End vundle and reset filetype on
 call vundle#end()

@@ -7,10 +7,6 @@ imap <C-c> <ESC>
 " Toggle rainbow-parentheses
 map <leader>r :RainbowParenthesesToggle<CR> :RainbowParenthesesLoadRound<CR> :RainbowParenthesesLoadSquare<CR> :RainbowParenthesesLoadBraces<CR>
 
-" Ctrl-(h/l) to navigate tabs left/right (mimic general movement and pane switching)
-map <C-h> :tabp<CR>
-map <C-l> :tabn<CR>
-
 " Ctrl-n for new tab
 map <C-n> :tabnew<CR>
 

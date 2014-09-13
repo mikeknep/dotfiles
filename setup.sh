@@ -21,7 +21,7 @@ echo " "
 echo "Thanks for cloning down my dotfiles!"
 echo "I hope you enjoy these settings."
 echo
-echo "This script will walk through each group of settings (bash, vim, rspec, and git) to check if you have an existing config file for that group. If you do, you will have three options:"
+echo "This script will walk through each group of settings (bash, vim, rspec, git, and tmux) to check if you have an existing config file for that group. If you do, you will have three options:"
 echo "  1. Keep using your existing config file and don't hook up to the dotfiles' settings for that group"
 echo "  2. Archive your existing config file (renaming it with the suffix '_old') and hooking up to the dotfiles' settings for that group"
 echo "  3. Delete your existing config file and hook up to the dotfiles' settings for that group"
@@ -33,7 +33,7 @@ echo
 
 
 
-declare -A configs=( ["bash"]=".bashrc" ["vim"]=".vimrc" ["rspec"]=".rspec" ["git"]=".gitconfig" )
+declare -A configs=( ["bash"]=".bashrc" ["vim"]=".vimrc" ["rspec"]=".rspec" ["git"]=".gitconfig" ["tmux"]=".tmux.conf" )
 
 for groupname in "${!configs[@]}"
 do

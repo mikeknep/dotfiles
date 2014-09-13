@@ -18,6 +18,9 @@ I've been convinced. Dotfiles must be treated as first-class citizens. So, here 
 - Directory for edits to specific plugins
 - Directory for filetype-specific settings
 
+**Tmux**
+- [WIP] Single config file with basic settings
+
 **Git**
 - Nothing fancy--global gitignore, use vim as default editor, etc.
 
