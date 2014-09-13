@@ -5,6 +5,8 @@
         default = simple
 [color]
         diff = true
+[color "diff"]
+        meta = yellow
 [core]
         excludesfile = ~/dotfiles/git/gitignore
         editor = vim
