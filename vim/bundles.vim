@@ -40,6 +40,12 @@ Plugin 'vim-scripts/tComment'
 " Navigate between vim and tmux seamlessly
 Plugin 'christoomey/vim-tmux-navigator'
 
+" Elixir syntax highlighting
+Plugin 'elixir-lang/vim-elixir'
+
+" Rust syntax highlighting
+Plugin 'wting/rust.vim'
+
 
 " End vundle and reset filetype on
 call vundle#end()

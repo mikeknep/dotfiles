@@ -7,8 +7,10 @@ imap <C-c> <ESC>
 " Toggle rainbow-parentheses
 map <leader>r :RainbowParenthesesToggle<CR> :RainbowParenthesesLoadRound<CR> :RainbowParenthesesLoadSquare<CR> :RainbowParenthesesLoadBraces<CR>
 
-" Ctrl-n for new tab
-map <C-n> :tabnew<CR>
+" Tabs
+map <leader>tn :tabnew<CR>
+map <leader>th :tabp<CR>
+map <leader>tl :tabn<CR>
 
 " Ctrl-f for find/replace
 map <C-f><C-r> :%s/
