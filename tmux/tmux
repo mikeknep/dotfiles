@@ -56,3 +56,5 @@ setw -g mode-keys vi
 set -g status-keys vi
 bind-key -t vi-edit Up history-up
 bind-key -t vi-edit Down history-down
+bind-key -t vi-copy v begin-selection
+bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
