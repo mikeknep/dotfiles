@@ -6,45 +6,24 @@ call vundle#begin()
 
 
 " Vundle plugins
+Plugin 'gmarik/vundle.vim'              " Vundle itself
 
-" Vundle itself
-Plugin 'gmarik/vundle.vim'
+Plugin 'kien/ctrlp.vim'                 " Fuzzy search
+Plugin 'scrooloose/nerdtree'            " NERDTree file directory
+Plugin 'christoomey/vim-tmux-navigator' " Navigate between vim and tmux seamlessly
 
-" Fuzzy search
-Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fireplace'            " Quasi-REPL for Clojure
 
-" File directory
-Plugin 'scrooloose/nerdtree'
+Plugin 'Raimondi/delimitMate'           " Autocomplete parens, brackets, etc.
 
-" Color scheme
-Plugin 'morhetz/gruvbox'
+Plugin 'vim-scripts/tComment'           " Toggle comment
 
-" Coffeescript syntax awareness
-Plugin 'kchmck/vim-coffee-script'
-
-" Highlight matching parentheses
-Plugin 'kien/rainbow_parentheses.vim'
-
-" Clojure keyword highlighting
-Plugin 'guns/vim-clojure-static'
-
-" Quasi-REPL for Clojure
-Plugin 'tpope/vim-fireplace'
-
-" Autocomplete parens, brackets, etc.
-Plugin 'Raimondi/delimitMate'
-
-" Toggle comment
-Plugin 'vim-scripts/tComment'
-
-" Navigate between vim and tmux seamlessly
-Plugin 'christoomey/vim-tmux-navigator'
-
-" Elixir syntax highlighting
-Plugin 'elixir-lang/vim-elixir'
-
-" Rust syntax highlighting
-Plugin 'wting/rust.vim'
+Plugin 'morhetz/gruvbox'                " Color scheme
+Plugin 'kien/rainbow_parentheses.vim'   " Highlight matching parentheses
+Plugin 'guns/vim-clojure-static'        " Clojure keyword highlighting
+Plugin 'kchmck/vim-coffee-script'       " Coffeescript syntax awareness
+Plugin 'elixir-lang/vim-elixir'         " Elixir syntax highlighting
+Plugin 'wting/rust.vim'                 " Rust syntax highlighting
 
 
 " End vundle and reset filetype on
