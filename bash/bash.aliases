@@ -1,5 +1,22 @@
-# Git aliases
+# Aliases
 
+## Rails
+alias rc="rails console"
+alias rs="rails server"
+
+
+## Navigation
+alias dots='cd ~/dotfiles'
+alias sandbox='cd ~/sandbox'
+
+
+## Misc
+alias v='vim'
+alias be='bundle exec'
+alias ll='ls -AFGgohl'
+
+
+## Git
 alias gs='git status'
 alias gp='git push'
 alias gpl='git pull'

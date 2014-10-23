@@ -1,5 +1,0 @@
-# Leiningen aliases
-
-alias lr='lein repl'
-alias lt='lein test'
-alias lsp='lein spec'

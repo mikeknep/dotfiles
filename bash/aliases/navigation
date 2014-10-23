@@ -1,7 +1,0 @@
-# Navigation aliases
-
-alias dotfiles='cd ~/dotfiles'
-alias mikeknep='cd ~/mikeknep'
-alias sandbox='cd ~/sandbox'
-alias 8l='cd ~/8thlight'
-alias kata='cd ~/8thlight/katas'
