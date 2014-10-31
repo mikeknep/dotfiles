@@ -8,5 +8,11 @@
 [color "diff"]
         meta = yellow
 [core]
-        excludesfile = ~/dotfiles/git/gitignore
+        excludesfile = ~/dotfiles/git/ignore
         editor = vim
+[alias]
+        st = status
+        ci = commit
+        co = checkout
+        br = branch
+        lg = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'

@@ -18,7 +18,7 @@ bind - split-window -v
 
 
 # Status bar format
-set -g status-left "#H"
+set -g status-left "#H (#S)"
 set -g status-left-length 50
 set -g status-right-length 50
 set -g status-right "%h%d %l:%M"
