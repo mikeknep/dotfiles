@@ -7,16 +7,14 @@ call vundle#begin()
 
 " Vundle plugins
 Plugin 'gmarik/vundle.vim'              " Vundle itself
-
 Plugin 'kien/ctrlp.vim'                 " Fuzzy search
 Plugin 'scrooloose/nerdtree'            " NERDTree file directory
 Plugin 'christoomey/vim-tmux-navigator' " Navigate between vim and tmux seamlessly
-
 Plugin 'tpope/vim-fireplace'            " Quasi-REPL for Clojure
-
-Plugin 'Raimondi/delimitMate'           " Autocomplete parens, brackets, etc.
-
+" Plugin 'Raimondi/delimitMate'           " Autocomplete parens, brackets, etc.
 Plugin 'vim-scripts/tComment'           " Toggle comment
+Plugin 'tpope/vim-fugitive'             " Git in vim
+Plugin 'yegappan/mru'                   " Most recently used files
 
 Plugin 'morhetz/gruvbox'                " Color scheme
 Plugin 'kien/rainbow_parentheses.vim'   " Highlight matching parentheses

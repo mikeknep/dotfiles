@@ -31,3 +31,6 @@ set confirm
 
 " Trim trailing whitespace on save
 autocmd BufWritePre *.* :%s/\s\+$//e
+
+set noswapfile
+set clipboard=unnamed
