@@ -1,7 +1,7 @@
 # Source all bash files
 source ~/dotfiles/bash/bash.aliases
 source ~/dotfiles/bash/bash.colors
-source ~/dotfiles/bash/bash.path
+source ~/dotfiles/bash/bash.env
 source ~/dotfiles/bash/bash.prompt
 source ~/dotfiles/bash/bash.rbenv
 for f in ~/dotfiles/bash/functions/*; do source $f; done

@@ -1,4 +1,4 @@
-# Bash prompt
+# Prompt
 
 ##
 ## Displays error face when command fails
@@ -22,8 +22,8 @@ alias vcinfo="vcprompt -f '%m%u%a'"
 
 ##
 ## The prompt (two-liner, example below)
-## 
+##
 ## (~/full/path/to/current/directory) [ gitbranch+?* ]
-## $ 
+## $
 ##
 export PS1="\n\[$DARK_GRAY\](\w)\$(when_failed '\[$RED\]') \[$LIGHT_GRAY\][ \[$YELLOW\]\$(vcbranch)\[$RED\]\$(vcinfo)\[$LIGHT_GRAY\] ]\n\[$LIGHT_BLUE\]$ \[$RESET\]"
