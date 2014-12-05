@@ -47,8 +47,7 @@ set-window-option -g window-status-current-bg default
 set-window-option -g window-status-current-attr bright
 
 
-# use the mouse
-set -g mode-mouse on
+# resize panes with the mouse
 set -g mouse-resize-pane on
 
 
