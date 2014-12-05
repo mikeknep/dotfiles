@@ -12,4 +12,4 @@ let g:ctrlp_abbrev = {
 
 
 " When searching in ctrl-p and opening a file that is already open somewhere, jump to it instead of re-opening
-let g:ctrlp_switch_buffer = 'ETVH'
+" let g:ctrlp_switch_buffer = 'ETVH'
