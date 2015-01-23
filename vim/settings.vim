@@ -21,6 +21,7 @@ set number
 set ruler
 set showcmd
 set list listchars=tab:»·,trail:·
+set nowrap
 
 " Movement
 set nostartofline
