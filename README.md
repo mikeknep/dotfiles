@@ -1,6 +1,6 @@
 # Dotfiles
 
-I've been convinced. Dotfiles must be treated as first-class citizens. So, here are mine.
+Dotfiles are first-class citizens.
 
 ## Groups
 
@@ -32,17 +32,26 @@ I've been convinced. Dotfiles must be treated as first-class citizens. So, here 
 
 ### Secrets
 
-If you have bash environment variables that need to be kept secret, create a "secret" directory in the bash directory (`mkdir ~/dotfiles/bash/secret`) and add any files you need there. Your .bashrc will source these files, but they will not be tracked by git. (See `~/dotfiles/.gitignore` and `~/dotfiles/bash/bash`.)
+If you have bash environment variables that need to be kept secret, create a "secret" directory in the bash directory (`mkdir ~/dotfiles/bash/secret`) and add any files you need there.
+Your .bashrc will source these files, but they will not be tracked by git.
+(See `~/dotfiles/.gitignore` and `~/dotfiles/bash/bash`.)
 
-## Setup Script
+## Setup script
 
-The bash script in this repository is for setting these dotfiles up on a computer with some existing configurations. If you want to clone down my setup and wire it up on your machine, use this. For starting completely from scratch (i.e. on a new computer), follow [this WIP script/outline](https://gist.github.com/mikeknep/e255a37c466cbb3c6b68).
+`setup.sh` is for setting up a completely new machine.
+It is as automated as possible.
+See top of file for prerequisites.
 
-### Notes
+## Symlink script
 
-#### Bash 4.x required!
+`symlink.sh` is simply for symlinking the files in this repo.
+If you want to clone down my setup and wire it up on your machine, use this.
 
-This script requires Bash 4.x. Unfortunately, Mac OSX ships with Bash 3.x. However, upgrading to Bash 4.x isn't too difficult:
+#### Notes
+
+##### Bash 4.x required!
+
+`symlink.sh` requires Bash 4.x. Unfortunately, Mac OSX ships with Bash 3.x. However, upgrading to Bash 4.x isn't too difficult:
 
 1. Install the latest bash using homebrew: `brew install bash`
 2. Add the brewed bash to your list of accepted shells: `echo /usr/local/bin/bash >> /etc/shells`
@@ -50,9 +59,9 @@ This script requires Bash 4.x. Unfortunately, Mac OSX ships with Bash 3.x. Howev
 
 You may have to restart your terminal. To confirm you're now on Bash 4.x, run `echo $BASH_VERSION`.
 
-#### Behavior
+##### Behavior
 
-- The script progresses group by group. You do not need to hook up to the dotfiles' settings for all groups--for example, if you want to keep your existing bash and git configuration but start using the repo's vim and rspec settings, you can do that.
+- `symlink.sh` progresses group by group. You do not need to hook up to the dotfiles' settings for all groups--for example, if you want to keep your existing bash and git configuration but start using the repo's vim and rspec settings, you can do that.
 
 - Archiving a file simply appends the suffix "old" to the filename. It remains in the home directory.
 
@@ -60,26 +69,14 @@ You may have to restart your terminal. To confirm you're now on Bash 4.x, run `e
 
 - If no existing config file is found, the script assumes you want to start using the settings in the dotfiles.
 
-#### Personal fixes
+##### Personal fixes
 
-Remember to change your git user credentials in `~/dotfiles/git/gitconfig` and navigation aliases in `~/dotfiles/bash/aliases`.
+If you are not me, remember to change your git user credentials in `~/dotfiles/git/gitconfig` and navigation aliases in `~/dotfiles/bash/aliases`.
 
-### OK, let's do this!
+##### Executable permissions
 
-First, clone the repo into your home directory:
-
-```
-$ git clone https://github.com/mikeknep/dotfiles ~/dotfiles
-```
-
-Next, give executable permissions to the setup script:
+Before running `symlink.sh`, you need to give executable permissions to the script:
 
 ```
 $ chmod u+x ~/dotfiles/setup.sh
-```
-
-Finally, run the setup script:
-
-```
-$ ~/dotfiles/setup.sh
 ```
