@@ -32,22 +32,18 @@ Dotfiles are first-class citizens.
 
 ### Secrets
 
-If you have bash environment variables that need to be kept secret, create a "secret" directory in the bash directory (`mkdir ~/dotfiles/bash/secret`) and add any files you need there.
-Your .bashrc will source these files, but they will not be tracked by git.
+Files in `bash/secret` will be sourced on login, but not tracked by git.
 (See `~/dotfiles/.gitignore` and `~/dotfiles/bash/bash`.)
 
-## Setup script
+## Setup scripts
 
-`bin/setup.sh` is for setting up a completely new machine.
-It is as automated as possible.
-See top of file for prerequisites.
+There are three main scripts in the `bin` directory for symlinking.
 
-## Symlink script
+1. `osx.sh` is a WIP, near-fully-automated script for setting up a new machine running OSX.
+2. `vm.sh` is another WIP script for use when provisioning a virtual machine.
+3. `guest.sh` walks through the symlink process. If you want to clone down my setup and wire it up on your machine, use this.
 
-`bin/symlink.sh` is simply for symlinking the files in this repo.
-If you want to clone down my setup and wire it up on your machine, use this.
-
-#### Notes
+#### Notes re: `bin/guest.sh`
 
 ##### Bash 4.x required!
 
@@ -71,11 +67,11 @@ You may have to restart your terminal. To confirm you're now on Bash 4.x, run `e
 
 ##### Personal fixes
 
-If you are not me, remember to change your git user credentials in `~/dotfiles/git/gitconfig` and navigation aliases in `~/dotfiles/bash/aliases`.
+Remember to change your git user credentials in `~/dotfiles/git/gitconfig` and navigation aliases in `~/dotfiles/bash/aliases`.
 
 ##### Executable permissions
 
-Before running `bin/symlink.sh`, you need to give executable permissions to the script:
+To make the script executable, run:
 
 ```
 $ chmod u+x ~/dotfiles/bin/setup.sh
