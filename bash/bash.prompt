@@ -6,4 +6,4 @@ alias vcinfo="vcprompt -f '%m%u%a'"
 
 
 ## The prompt
-export PS1="\n\[$DARK_GRAY\](\w) \[$LIGHT_GRAY\][ \[$YELLOW\]\$(vcbranch)\[$RED\]\$(vcinfo)\[$LIGHT_GRAY\] ]\n\[$LIGHT_BLUE\]$ \[$RESET\]"
+export PS1="\n\[$LIGHT_GRAY\](\u@\h) \[$LIGHT_BLUE\](\w) \[$YELLOW\]\$(vcbranch)\[$RED\]\$(vcinfo)\n\[$CYAN\]$ \[$RESET\]"
