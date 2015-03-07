@@ -11,15 +11,13 @@ Plugin 'kien/ctrlp.vim'                 " Fuzzy search
 Plugin 'scrooloose/nerdtree'            " NERDTree file directory
 Plugin 'christoomey/vim-tmux-navigator' " Navigate between vim and tmux seamlessly
 Plugin 'tpope/vim-fireplace'            " Quasi-REPL for Clojure
-" Plugin 'Raimondi/delimitMate'           " Autocomplete parens, brackets, etc.
 Plugin 'vim-scripts/tComment'           " Toggle comment
-Plugin 'tpope/vim-fugitive'             " Git in vim
 Plugin 'yegappan/mru'                   " Most recently used files
 
 Plugin 'morhetz/gruvbox'                " Color scheme
 Plugin 'kien/rainbow_parentheses.vim'   " Highlight matching parentheses
-Plugin 'guns/vim-clojure-static'        " Clojure keyword highlighting
-Plugin 'kchmck/vim-coffee-script'       " Coffeescript syntax awareness
+Plugin 'guns/vim-clojure-static'        " Clojure syntax highlighting
+Plugin 'kchmck/vim-coffee-script'       " Coffeescript syntax highlighting
 Plugin 'elixir-lang/vim-elixir'         " Elixir syntax highlighting
 Plugin 'wting/rust.vim'                 " Rust syntax highlighting
 
