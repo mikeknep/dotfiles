@@ -8,6 +8,3 @@ do
   fi
   ln -s $VM_HOME/dotfiles/$groupname/$groupname $VM_HOME/$filename
 done
-
-git clone https://github.com/gmarik/Vundle.vim.git $VM_HOME/.vim/bundle/Vundle.vim
-su vagrant -c 'sudo vim -u ~/dotfiles/vim/bundles.vim +PluginInstall +qall -e -s'
