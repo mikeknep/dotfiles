@@ -14,12 +14,13 @@ Plugin 'tpope/vim-fireplace'            " Quasi-REPL for Clojure
 Plugin 'vim-scripts/tComment'           " Toggle comment
 Plugin 'yegappan/mru'                   " Most recently used files
 
-Plugin 'morhetz/gruvbox'                " Color scheme
+Plugin 'mikeknep/gruvbox'               " Fork of morhetz/gruvbox with better markdown support
 Plugin 'kien/rainbow_parentheses.vim'   " Highlight matching parentheses
 Plugin 'guns/vim-clojure-static'        " Clojure syntax highlighting
 Plugin 'kchmck/vim-coffee-script'       " Coffeescript syntax highlighting
 Plugin 'elixir-lang/vim-elixir'         " Elixir syntax highlighting
 Plugin 'wting/rust.vim'                 " Rust syntax highlighting
+Plugin 'tpope/vim-markdown'             " Markdown syntax highlighting
 
 
 " End vundle and reset filetype on
