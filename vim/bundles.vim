@@ -14,7 +14,7 @@ Plugin 'tpope/vim-fireplace'            " Quasi-REPL for Clojure
 Plugin 'vim-scripts/tComment'           " Toggle comment
 Plugin 'yegappan/mru'                   " Most recently used files
 
-Plugin 'mikeknep/gruvbox'               " Fork of morhetz/gruvbox with better markdown support
+Plugin 'morhetz/gruvbox'                " Pretty colors
 Plugin 'kien/rainbow_parentheses.vim'   " Highlight matching parentheses
 Plugin 'guns/vim-clojure-static'        " Clojure syntax highlighting
 Plugin 'kchmck/vim-coffee-script'       " Coffeescript syntax highlighting
