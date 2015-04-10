@@ -7,6 +7,7 @@ Dotfiles are first-class citizens.
 **Bash**
 - Aliases
 - Color code constants
+- Docker settings
 - Environment variables
 - Functions
 - Prompt
@@ -18,7 +19,7 @@ Dotfiles are first-class citizens.
 - Global gitignore
 
 **Rspec**
-- Colorful, documentation output
+- Colorful dots
 
 **Tmux**
 - Single config file with basic settings
