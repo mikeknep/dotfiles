@@ -10,4 +10,4 @@ map <leader>r :RainbowParenthesesToggle<CR> :RainbowParenthesesLoadRound<CR> :Ra
 
 " Ctrl-f for find/replace
 nmap <C-f><C-r> :%s/
-vmap <C-F><C-R> :s/
+vmap <C-f><C-r> :s/

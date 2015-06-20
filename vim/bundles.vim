@@ -21,6 +21,7 @@ Plugin 'kchmck/vim-coffee-script'       " Coffeescript syntax highlighting
 Plugin 'elixir-lang/vim-elixir'         " Elixir syntax highlighting
 Plugin 'wting/rust.vim'                 " Rust syntax highlighting
 Plugin 'tpope/vim-markdown'             " Markdown syntax highlighting
+Plugin 'derekwyatt/vim-scala'           " Scala syntax highlighting
 
 
 " End vundle and reset filetype on
