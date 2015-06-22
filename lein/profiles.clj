@@ -5,7 +5,10 @@
             [lein-immutant "0.8.0"]]
   :dependencies [[com.gfredericks/repl-utils "0.2.4"]
                  [org.clojure/tools.nrepl "0.2.8"]
-                 [org.clojure/tools.namespace "0.2.10"]]
+                 [org.clojure/tools.namespace "0.2.10"]
+                 [pjstadig/humane-test-output "0.7.0"]]
+  :injections [(require 'pjstadig.humane-test-output)
+               (pjstadig.humane-test-output/activate!)]
   :shorthand {. [clojure.test/run-tests
                  clojure.tools.namespace.repl/refresh
                  com.gfredericks.repl/add-dep
