@@ -18,6 +18,9 @@ Dotfiles are first-class citizens.
 - Basic settings
 - Global gitignore
 
+**Leiningen**
+- Helpful repl utilities
+
 **Rspec**
 - Colorful dots
 
