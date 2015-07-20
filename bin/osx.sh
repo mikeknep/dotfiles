@@ -1,6 +1,7 @@
 # PREREQUISITES
 # Install Xcode command line tools
-# Copy ssh files from previous machine
+  # sudo xcode-select --install     << does that work?
+# Copy ssh keys
 # Clone down dotfiles (`git clone git@github.com:mikeknep/dotfiles.git ~/dotfiles`)
 
 echo "Installing Homebrew"
@@ -39,12 +40,6 @@ if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
 EOF
-
-
-echo "Installing vcprompt (git info in status)"
-mkdir ~/bin
-curl -sL https://github.com/djl/vcprompt/raw/master/bin/vcprompt > ~/bin/vcprompt
-chmod 755 ~/bin/vcprompt
 
 
 echo "Installing brew packages"
