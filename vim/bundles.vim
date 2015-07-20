@@ -13,15 +13,18 @@ Plugin 'christoomey/vim-tmux-navigator' " Navigate between vim and tmux seamless
 Plugin 'tpope/vim-fireplace'            " Quasi-REPL for Clojure
 Plugin 'vim-scripts/tComment'           " Toggle comment
 Plugin 'yegappan/mru'                   " Most recently used files
-
 Plugin 'morhetz/gruvbox'                " Pretty colors
 Plugin 'kien/rainbow_parentheses.vim'   " Highlight matching parentheses
-Plugin 'guns/vim-clojure-static'        " Clojure syntax highlighting
-Plugin 'kchmck/vim-coffee-script'       " Coffeescript syntax highlighting
-Plugin 'elixir-lang/vim-elixir'         " Elixir syntax highlighting
-Plugin 'wting/rust.vim'                 " Rust syntax highlighting
-Plugin 'tpope/vim-markdown'             " Markdown syntax highlighting
-Plugin 'derekwyatt/vim-scala'           " Scala syntax highlighting
+
+"" syntax highlighting
+Plugin 'guns/vim-clojure-static'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'wting/rust.vim'
+Plugin 'tpope/vim-markdown'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'elmcast/elm-vim'
+Plugin 'mustache/vim-mustache-handlebars'
 
 
 " End vundle and reset filetype on
