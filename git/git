@@ -16,3 +16,4 @@
         co = checkout
         br = branch
         lg = log --graph --pretty=format:'%C(magenta)%h %C(green)(%cr) %C(reset)%s %C(blue)<%an>%C(yellow)%d%C(reset)'
+        gr = grep --break --heading -n
