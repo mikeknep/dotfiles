@@ -13,9 +13,18 @@ set smartcase
 
 " Visuals
 syntax on
-colorscheme gruvbox
-let g:gruvbox_italic=0
-set background=dark
+
+
+let iterm_profile=$ITERM_PROFILE
+if iterm_profile == 'DevLight'
+  colorscheme bp-light
+  set background=light
+else
+  colorscheme gruvbox
+  let g:gruvbox_italic=0
+  set background=dark
+endif
+
 set splitright
 set number
 set ruler
