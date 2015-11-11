@@ -1,9 +1,0 @@
-# gh
-
-## Jump to current repo on GitHub
-
-gh() {
-  local giturl=$(grep -o -m 1 'git@.*' .git/config)
-  giturl=${giturl/git\@github\.com\:/https://github.com/}
-  open $giturl
-}
