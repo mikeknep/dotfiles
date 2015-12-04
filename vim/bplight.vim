@@ -40,7 +40,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name  = "bp"
+let colors_name  = "bplight"
 let s:vmode      = "cterm"
 let s:background = "254"
 let s:window     = "253"

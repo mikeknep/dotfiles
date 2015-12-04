@@ -1,5 +1,6 @@
 " Source global Vim files
 source ~/dotfiles/vim/bundles.vim
+source ~/dotfiles/vim/colorschemes.vim
 source ~/dotfiles/vim/settings.vim
 source ~/dotfiles/vim/key_mappings.vim
 
