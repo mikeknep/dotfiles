@@ -8,3 +8,5 @@ do
   fi
   ln -s $VM_HOME/dotfiles/$groupname/$groupname $VM_HOME/$filename
 done
+mkdir $VM_HOME/.vim/colors
+cp $VM_HOME/dotfiles/vim/bp-light.vim $VM_HOME/.vim/colors/
