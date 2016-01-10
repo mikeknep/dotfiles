@@ -9,6 +9,3 @@ setlocal lispwords+=describe,it,context,around,should=,should-not=,should,should
 
 " Run current test file (via vim-fireplace)
 nmap ,, :RunTests<CR>
-
-" Run all tests (via lein shorthand)
-nmap .. :Eval (./refresh) (./run-all-tests)<CR>
