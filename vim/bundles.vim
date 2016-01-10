@@ -15,6 +15,7 @@ Plugin 'vim-scripts/tComment'           " Toggle comment
 Plugin 'yegappan/mru'                   " Most recently used files
 Plugin 'morhetz/gruvbox'                " Pretty colors
 Plugin 'kien/rainbow_parentheses.vim'   " Highlight matching parentheses
+Plugin 'vim-scripts/paredit.vim'        " Lisp editing
 
 "" syntax highlighting
 Plugin 'guns/vim-clojure-static'
