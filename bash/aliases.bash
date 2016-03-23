@@ -1,10 +1,5 @@
 # Aliases
 
-## Rails
-alias rc="rails console"
-alias rs="rails server"
-
-
 ## Navigation
 alias dots='cd ~/dotfiles'
 alias sandbox='cd ~/sandbox'
@@ -15,7 +10,6 @@ alias v='vim'
 alias be='bundle exec'
 alias bi='bundle install'
 alias ll='ls -AFGgohl'
-alias tx='tmux a -t'
 
 
 ## Git
