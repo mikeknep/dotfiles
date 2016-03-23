@@ -12,7 +12,6 @@ set ignorecase
 set smartcase
 
 " Visuals
-syntax on
 set splitright
 set number
 set ruler
