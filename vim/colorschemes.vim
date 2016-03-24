@@ -1,5 +1,4 @@
-let term_program=$TERM_PROGRAM
-if term_program == 'Apple_Terminal'
+if $COLORSCHEME == "grayscale"
   colorscheme pencil
   set background=light
   syntax off

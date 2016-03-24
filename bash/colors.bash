@@ -26,9 +26,15 @@ LIGHT_CYAN="\e[1;36m"
 RESET="\e[0m"
 
 
-
-
 if [ $TERM_PROGRAM = 'Apple_Terminal' ]
+then
+  export COLORSCHEME="grayscale"
+else
+  export COLORSCHEME="colors"
+fi
+
+
+if [ $COLORSCHEME = "grayscale" ]
 then
   export PROMPT_USERHOST_COLOR="${DARK_GRAY}"
   export PROMPT_PATH_COLOR="${DARK_GRAY}"
