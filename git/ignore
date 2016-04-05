@@ -3,3 +3,4 @@
 .lein-repl-history
 .nrepl-history
 **/vendor/bundle
+.bundle
