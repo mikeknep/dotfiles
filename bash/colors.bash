@@ -26,11 +26,16 @@ LIGHT_CYAN="\e[1;36m"
 RESET="\e[0m"
 
 
-if [ $TERM_PROGRAM = 'Apple_Terminal' ]
+# Default to grayscale in Terminal and colors in iTerm,
+# but allow overriding initial value in either app
+if [ -z "$COLORSCHEME" ]
 then
-  export COLORSCHEME="grayscale"
-else
-  export COLORSCHEME="colors"
+  if [ $TERM_PROGRAM = 'Apple_Terminal' ]
+  then
+    export COLORSCHEME="grayscale"
+  else
+    export COLORSCHEME="colors"
+  fi
 fi
 
 

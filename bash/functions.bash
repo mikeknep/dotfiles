@@ -1,3 +1,11 @@
+## Re-source color settings when switching colorschemes
+vangogh () {
+  export COLORSCHEME=$1
+  source ~/dotfiles/bash/colors.bash
+  source ~/dotfiles/bash/prompt.bash
+  tmux source-file ~/dotfiles/tmux/tmux
+}
+
 ## Generate skeleton for a new ruby project (arg1 = project name)
 rubynew () {
 mkdir $1 $1/lib $1/spec
