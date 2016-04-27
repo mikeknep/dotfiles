@@ -10,16 +10,15 @@ vangogh () {
 rubynew () {
 mkdir $1 $1/lib $1/spec
 
-cat >$1/spec/spec_helper.rb <<EOF
-require "rspec"
-
-Dir["./lib/*.rb"].each { |file| require file }
+cat >$1/lib/foo.rb <<EOF
+class Foo
+end
 EOF
 
-cat >$1/spec/_spec.rb <<EOF
-require "spec_helper"
+cat >$1/spec/foo_spec.rb <<EOF
+require "foo"
 
-describe Something do
+describe Foo do
   it "does something"
 end
 EOF
@@ -29,6 +28,9 @@ source "https://rubygems.org"
 
 gem "rspec"
 EOF
+
+cd $1
+bundle install -j 4
 }
 
 
