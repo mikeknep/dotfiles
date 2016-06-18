@@ -1,5 +1,5 @@
 if $COLORSCHEME == "grayscale"
-  colorscheme pencil
+  colorscheme m
   set background=light
   syntax off
 else
@@ -10,12 +10,12 @@ else
 endif
 
 function SwapColors()
-  if g:colors_name == "pencil"
+  if g:colors_name == "m"
     colorscheme gruvbox
     set background=dark
     syntax on
   elseif g:colors_name == "gruvbox"
-    colorscheme pencil
+    colorscheme m
     set background=light
     syntax off
   endif

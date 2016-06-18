@@ -14,7 +14,7 @@ Plugin 'tpope/vim-fireplace'            " Quasi-REPL for Clojure
 Plugin 'vim-scripts/tComment'           " Toggle comment
 Plugin 'yegappan/mru'                   " Most recently used files
 Plugin 'morhetz/gruvbox'                " Pretty colors
-Plugin 'reedes/vim-colors-pencil'       " Pretty grayscale
+Plugin 'hkgumbs/vim-colors-m'           " Pretty grayscale
 Plugin 'kien/rainbow_parentheses.vim'   " Highlight matching parentheses
 Plugin 'vim-scripts/paredit.vim'        " Lisp editing
 Plugin 'tpope/vim-fugitive'             " Git functionality
