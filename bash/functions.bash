@@ -30,7 +30,7 @@ gem "rspec"
 EOF
 
 cd $1
-bundle install -j 4
+bundle install
 }
 
 
