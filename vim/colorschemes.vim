@@ -9,7 +9,7 @@ else
   syntax on
 endif
 
-function SwapColors()
+function ColorschemeSwap()
   if g:colors_name == "m"
     colorscheme gruvbox
     set background=dark
@@ -21,4 +21,4 @@ function SwapColors()
   endif
 endfunction
 
-map <leader>cs :call SwapColors()<CR>
+map <leader>cs :call ColorschemeSwap()<CR>
