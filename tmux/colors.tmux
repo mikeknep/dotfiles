@@ -3,7 +3,7 @@ set-option -g pane-border-fg $TMUX_BORDER_COLOR
 set-option -g pane-active-border-fg $TMUX_BORDER_COLOR
 set-option -g status-fg $TMUX_STATUS_TEXT_COLOR
 set-option -g status-bg $TMUX_STATUS_BACKGROUND_COLOR
-set -g message-fg $TMUX_ALERT_TEXT_COLOR
-set -g message-bg $TMUX_ALERT_BACKGROUND_COLOR
+set-option -g message-fg $TMUX_ALERT_TEXT_COLOR
+set-option -g message-bg $TMUX_ALERT_BACKGROUND_COLOR
 set-window-option -g window-status-current-fg $TMUX_ACTIVE_WINDOW_TEXT_COLOR
 set-window-option -g window-status-current-bg $TMUX_ACTIVE_WINDOW_BACKGROUND_COLOR
