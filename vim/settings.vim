@@ -14,7 +14,6 @@ set smartcase
 " Visuals
 set splitright
 set number
-set ruler
 set showcmd
 set list listchars=tab:»·,trail:·
 set nowrap
