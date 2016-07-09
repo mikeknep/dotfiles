@@ -1,4 +1,4 @@
-declare -A configs=( ["bash"]=".bashrc" ["vim"]=".vimrc" ["rspec"]=".rspec" ["git"]=".gitconfig" ["tmux"]=".tmux.conf" )
+declare -A configs=( ["bash"]=".bashrc" ["git"]=".gitconfig" ["lein"]=".lein/profiles" ["pry"]=".pryrc" ["rspec"]=".rspec" ["tmux"]=".tmux.conf" ["vim"]=".vimrc" )
 for groupname in "${!configs[@]}"
 do
   filename="${configs["$groupname"]}"
@@ -8,5 +8,3 @@ do
   fi
   ln -s $VM_HOME/dotfiles/$groupname/$groupname $VM_HOME/$filename
 done
-mkdir $VM_HOME/.vim/colors
-cp $VM_HOME/dotfiles/vim/bp-light.vim $VM_HOME/.vim/colors/
