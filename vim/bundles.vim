@@ -28,7 +28,9 @@ Plugin 'tpope/vim-markdown'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'elmcast/elm-vim'
 Plugin 'mustache/vim-mustache-handlebars'
-
+Plugin 'toyamarinyon/vim-swift'
+Plugin 'stanangeloff/php.vim'
+Plugin 'jwalton512/vim-blade'
 
 " End vundle and reset filetype on
 call vundle#end()
