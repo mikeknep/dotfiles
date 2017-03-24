@@ -32,6 +32,7 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'toyamarinyon/vim-swift'
 Plugin 'stanangeloff/php.vim'
 Plugin 'jwalton512/vim-blade'
+Plugin 'leafgarland/typescript-vim'
 
 " End vundle and reset filetype on
 call vundle#end()
