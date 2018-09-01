@@ -6,13 +6,12 @@ call vundle#begin()
 
 
 " Vundle plugins
-Plugin 'gmarik/vundle.vim'              " Vundle itself
+Plugin 'VundleVim/Vundle.vim'           " Vundle itself
 Plugin 'kien/ctrlp.vim'                 " Fuzzy search
 Plugin 'scrooloose/nerdtree'            " NERDTree file directory
 Plugin 'christoomey/vim-tmux-navigator' " Navigate between vim and tmux seamlessly
 Plugin 'tpope/vim-fireplace'            " Quasi-REPL for Clojure
 Plugin 'vim-scripts/tComment'           " Toggle comment
-Plugin 'yegappan/mru'                   " Most recently used files
 Plugin 'morhetz/gruvbox'                " Pretty colors
 Plugin 'hkgumbs/vim-colors-m'           " Pretty grayscale
 Plugin 'kien/rainbow_parentheses.vim'   " Highlight matching parentheses
@@ -36,4 +35,4 @@ Plugin 'leafgarland/typescript-vim'
 
 " End vundle and reset filetype on
 call vundle#end()
-filetype on
+filetype plugin indent on

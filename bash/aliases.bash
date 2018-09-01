@@ -15,6 +15,7 @@ alias ll='ls -AFGgohl'
 ## Git
 alias gs='git status'
 alias gp='git push'
+alias gpf='git push --force-with-lease'
 alias gpl='git pull'
 alias ga='git add'
 alias gaa='git add -A'
