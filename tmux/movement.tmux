@@ -1,5 +1,5 @@
 # resize panes with the mouse
-set -g mouse-resize-pane on
+set -g mouse on
 
 # double-prefix to jump back and forth
 bind-key C-q last-window
@@ -12,5 +12,5 @@ bind -n C-l run "(tmux display-message -p '#{pane_current_command}' | grep -iqE 
 bind -n C-\ run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)g?(view|n?vim?)(diff)?$' && tmux send-keys 'C-\\') || tmux select-pane -l"
 setw -g mode-keys vi
 set -g status-keys vi
-bind-key -t vi-edit Up history-up
-bind-key -t vi-edit Down history-down
+bind-key -T edit-mode-vi Up send-keys -X history-up
+bind-key -T edit-mode-vi Down send-keys -X history-down
