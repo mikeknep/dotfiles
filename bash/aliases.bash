@@ -6,7 +6,6 @@ alias sandbox='cd ~/sandbox'
 
 
 ## Misc
-alias v='vim'
 alias be='bundle exec'
 alias bi='bundle install'
 alias ll='ls -AFGgohl'

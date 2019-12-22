@@ -1,4 +1,4 @@
-declare -A configs=( ["bash"]=".bashrc" ["git"]=".gitconfig" ["lein"]=".lein/profiles" ["pry"]=".pryrc" ["rspec"]=".rspec" ["tmux"]=".tmux.conf" ["vim"]=".vimrc" )
+declare -A configs=( ["bash"]=".bashrc" ["git"]=".gitconfig" ["tmux"]=".tmux.conf" ["vim"]=".vimrc" )
 for groupname in "${!configs[@]}"
 do
   filename="${configs["$groupname"]}"

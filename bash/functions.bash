@@ -24,27 +24,3 @@ EOF
 cd $1
 bundle install
 }
-
-
-
-## Jump to current repo on GitHub
-gh() {
-  local giturl=$(grep -o -m 1 'git@.*' .git/config)
-  giturl=${giturl/git\@github\.com\:/https://github.com/}
-  open $giturl
-}
-
-
-
-## Navigate up multiple directories
-up () {
-  if [ $# -eq 0 ]
-  then
-    cd ..
-  else
-    for i in $(seq $1)
-    do
-      cd ..
-    done
-  fi
-}
