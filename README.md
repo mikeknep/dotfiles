@@ -9,6 +9,8 @@ Dotfiles are first-class citizens.
 Files in `bash/secret/` will be sourced on login, but not tracked by git.
 (Handy for sensitive data like environment variables.)
 
+Similarly, git configurations in `git/secret` are not tracked by git.
+
 #### Setup scripts
 
 1. `bin/symlink-all.sh` sets up all necessary symlinks
