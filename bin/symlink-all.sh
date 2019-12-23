@@ -1,10 +1,5 @@
-declare -A configs=( ["bash"]=".bashrc" ["git"]=".gitconfig" ["tmux"]=".tmux.conf" ["vim"]=".vimrc" )
-for groupname in "${!configs[@]}"
-do
-  filename="${configs["$groupname"]}"
-  if [ -f $VM_HOME/$filename ]
-  then
-    rm $VM_HOME/$filename
-  fi
-  ln -s $VM_HOME/dotfiles/$groupname/$groupname $VM_HOME/$filename
-done
+ln -sf $HOME/dotfiles/.alacritty.yml $HOME/.alacritty.yml
+ln -sf $HOME/dotfiles/.bashrc $HOME/.bashrc
+ln -sf $HOME/dotfiles/.gitconfig $HOME/.gitconfig
+ln -sf $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
+ln -sf $HOME/dotfiles/.vimrc $HOME/.vimrc
