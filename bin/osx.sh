@@ -23,6 +23,10 @@ echo Symlinking dotfiles
 ~/dotfiles/bin/symlink-all.sh
 
 
+echo Installing Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+
 echo Adding bash profile
 cat >~/.bash_profile <<EOF
 if [ -f ~/.bashrc ]; then
@@ -31,8 +35,8 @@ fi
 EOF
 
 
-echo Installing tmux and brew-cask via brew
-brew install tmux caskroom/cask/brew-cask
+echo Installing via brew
+brew install awscli jq tmux caskroom/cask/brew-cask
 
-echo Installing apps via brewcask
-brew cask install iterm2 alfred google-chrome
+echo Installing via brewcask
+brew cask install alacritty alfred brave-browser
