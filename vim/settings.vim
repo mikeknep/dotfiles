@@ -1,3 +1,9 @@
+" Colors
+colorscheme gruvbox
+let g:gruvbox_italic=0
+set background=dark
+syntax on
+
 " Indentation
 set autoindent
 set shiftwidth=2
