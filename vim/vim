@@ -1,14 +1,8 @@
 " Source global Vim files
 source ~/dotfiles/vim/bundles.vim
-source ~/dotfiles/vim/colorschemes.vim
+source ~/dotfiles/vim/plugin_edits.vim
 source ~/dotfiles/vim/settings.vim
 source ~/dotfiles/vim/key_mappings.vim
-
-
-" Source edits to Vundle plugins
-for file in split(globpath('~/dotfiles/vim/plugin_edits/', '*.vim'), '\n')
-  exe 'source ' file
-endfor
 
 
 " Source language-specific settings
