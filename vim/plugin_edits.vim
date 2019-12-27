@@ -26,7 +26,7 @@ hi! link markdownCodeDelimiter GruvboxBlue
 
 
 " markdown
-let g:markdown_fenced_languages = ['ruby', 'sh', 'json']
+let g:markdown_fenced_languages = ['elm', 'json', 'python', 'ruby', 'rust', 'scala', 'sh', 'sql']
 
 
 " nerdtree
