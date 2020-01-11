@@ -33,11 +33,11 @@ EOF
 
 
 # Install some tools via brew
-brew install awscli jq tmux
+brew install awscli jq tmux warrensbox/tap/tfswitch
 
 
 # Install some apps via brewcask
-brew cask install alacritty alfred brave-browser
+brew cask install 1password alacritty alfred brave-browser docker dropbox fantastical keybase postico slack spotify tuple zoomus
 
 
 # Install Fira Code
