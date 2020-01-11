@@ -7,11 +7,10 @@ Useful for sensitive data like environment variables, private project gitconfigs
 
 ### Setup scripts
 
-1. `bin/symlink-all.sh` sets up all necessary symlinks
-2. `bin/osx.sh` is a nearly-fully-automated script for setting up a new machine running OSX.
+`bin/symlink-all.sh` sets up all necessary symlinks
 
 
 ### Notes for anyone cloning these dotfiles
 
-- OSX script is WIP and has not been fully tested
+- MacOS script is more a walkthrough than an automatable setup script
 - Remember to change your git user credentials in `.gitconfig`
