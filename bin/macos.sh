@@ -33,7 +33,7 @@ EOF
 
 
 # Install some tools via brew
-brew install awscli jq tmux warrensbox/tap/tfswitch
+brew install awscli jq reattach-to-user-namespace tmux warrensbox/tap/tfswitch
 
 
 # Install some apps via brewcask
