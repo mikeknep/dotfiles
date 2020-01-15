@@ -19,7 +19,6 @@ Plugin 'vim-scripts/paredit.vim'        " Lisp editing
 Plugin 'tpope/vim-fugitive'             " Git functionality
 Plugin 'racer-rust/vim-racer'           " Rust code completion
 Plugin 'hashivim/vim-terraform'         " Terraform integration
-Plugin 'ambv/black'                     " Python linting
 
 "" syntax highlighting
 Plugin 'guns/vim-clojure-static'
