@@ -1,6 +1,7 @@
 " Colors
 colorscheme gruvbox
 let g:gruvbox_italic=0
+let g:gruvbox_contrast_dark="hard"
 set background=dark
 syntax on
 
