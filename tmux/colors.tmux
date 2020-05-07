@@ -1,4 +1,5 @@
 set -g default-terminal "screen-256color"
+set-option -sa terminal-overrides ",xterm*:Tc"
 set-option -g pane-border-style fg=$TMUX_BORDER_COLOR
 set-option -g pane-active-border-style fg=$TMUX_BORDER_COLOR
 set-option -g status-style fg=$TMUX_STATUS_TEXT_COLOR,bg=$TMUX_STATUS_BACKGROUND_COLOR
