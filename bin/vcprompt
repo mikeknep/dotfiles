@@ -71,9 +71,9 @@ TIMEOUT = os.environ.get('VCPROMPT_TIMEOUT', 0)
 SYSTEMS = []
 
 # status indicators
-STAGED = os.environ.get('VCPROMPT_STAGED', '*')
-MODIFIED = os.environ.get('VCPROMPT_MODIFIED', '+')
-UNTRACKED = os.environ.get('VCPROMPT_UNTRACKED', '?')
+STAGED = os.environ.get('VCPROMPT_STAGED', '●')
+MODIFIED = os.environ.get('VCPROMPT_MODIFIED', '●')
+UNTRACKED = os.environ.get('VCPROMPT_UNTRACKED', '●')
 
 
 def popen(command, stdout=PIPE, stderr=PIPE):
