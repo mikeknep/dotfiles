@@ -19,3 +19,5 @@
         gr = grep --break --heading -n
 [include]
         path = ~/dotfiles/git/secret
+[pull]
+	rebase = true
