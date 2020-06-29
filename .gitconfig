@@ -21,3 +21,5 @@
         path = ~/dotfiles/git/secret
 [pull]
 	rebase = true
+[init]
+	templateDir = ~/dotfiles/git/template
