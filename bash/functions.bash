@@ -24,3 +24,17 @@ EOF
 cd $1
 bundle install
 }
+
+
+presentation_mode() {
+  sed -i '' -E "s/size: [0-9]+/size: 18/g" ~/dotfiles/.alacritty.yml
+}
+normal_mode() {
+  sed -i '' -E "s/size: [0-9]+/size: 12/g" ~/dotfiles/.alacritty.yml
+}
+
+
+bump() {
+  brew upgrade
+  pyenv rehash
+}
