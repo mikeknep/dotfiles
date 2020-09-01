@@ -40,6 +40,9 @@ brew install awscli jq reattach-to-user-namespace tmux warrensbox/tap/tfswitch
 brew cask install 1password alacritty alfred brave-browser docker dropbox fantastical keybase postico slack spotify tuple zoomus
 
 
+# Install Tmux Plugin Manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # Install Fira Code
 # https://github.com/tonsky/FiraCode
 # Add all of the ttf fonts from the downloaded zip to FontBook
