@@ -12,7 +12,8 @@ Plugin 'scrooloose/nerdtree'            " NERDTree file directory
 Plugin 'christoomey/vim-tmux-navigator' " Navigate between vim and tmux seamlessly
 Plugin 'tpope/vim-fireplace'            " Quasi-REPL for Clojure
 Plugin 'vim-scripts/tComment'           " Toggle comment
-Plugin 'morhetz/gruvbox'                " Pretty colors
+Plugin 'morhetz/gruvbox'                " Pretty dark colors
+Plugin 'altercation/vim-colors-solarized' " Pretty light colors
 Plugin 'hkgumbs/vim-colors-m'           " Pretty grayscale
 Plugin 'kien/rainbow_parentheses.vim'   " Highlight matching parentheses
 Plugin 'vim-scripts/paredit.vim'        " Lisp editing
