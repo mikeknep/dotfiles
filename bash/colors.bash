@@ -31,12 +31,5 @@ export PROMPT_GIT_BRANCH_COLOR="${YELLOW}"
 export PROMPT_GIT_STATUS_COLOR="${PURPLE}"
 export PROMPT_DOLLAR_COLOR="${CYAN}"
 export PROMPT_RESET="${RESET}"
-export TMUX_BORDER_COLOR="#585858"
-export TMUX_STATUS_TEXT_COLOR="#8787af"
-export TMUX_STATUS_BACKGROUND_COLOR="#262626"
-export TMUX_ALERT_TEXT_COLOR="#dadada"
-export TMUX_ALERT_BACKGROUND_COLOR="#303030"
-export TMUX_ACTIVE_WINDOW_TEXT_COLOR="#dadada"
-export TMUX_ACTIVE_WINDOW_BACKGROUND_COLOR="#262626"
 
 # For more info on color adjustments, paricularly in iTerm2, see: https://github.com/morhetz/gruvbox/issues/8#issuecomment-27627656
