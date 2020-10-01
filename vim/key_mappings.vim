@@ -10,3 +10,8 @@ vmap <C-f><C-r> :s/
 
 " Refresh .vimrc
 map <leader>vs :source $MYVIMRC<CR>
+
+" Searching
+map <c-p> :execute 'FZF'<CR>
+nmap <silent> <Leader>s :execute 'FindUnderCursor'<CR>
+vmap <silent> <Leader>s :call FindText()<CR>

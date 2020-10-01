@@ -7,7 +7,6 @@ call vundle#begin()
 
 " Vundle plugins
 Plugin 'VundleVim/Vundle.vim'           " Vundle itself
-Plugin 'kien/ctrlp.vim'                 " Fuzzy search
 Plugin 'scrooloose/nerdtree'            " NERDTree file directory
 Plugin 'christoomey/vim-tmux-navigator' " Navigate between vim and tmux seamlessly
 Plugin 'tpope/vim-fireplace'            " Quasi-REPL for Clojure
@@ -21,6 +20,9 @@ Plugin 'tpope/vim-fugitive'             " Git functionality
 Plugin 'racer-rust/vim-racer'           " Rust code completion
 Plugin 'hashivim/vim-terraform'         " Terraform integration
 Plugin 'fatih/vim-go'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+Plugin 'felipesere/search'
 
 "" syntax highlighting
 Plugin 'guns/vim-clojure-static'
