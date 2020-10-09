@@ -1,0 +1,14 @@
+[git_branch]
+style = "bold yellow"
+
+[git_status]
+format = "[($untracked)](blue)[($modified)](yellow)[($deleted)](red)[($staged)](green) "
+conflicted = "✘"
+untracked  = "●"
+modified   = "●"
+staged     = "●"
+deleted    = "●"
+
+[env_var]
+variable = "DP_ENV"
+style = "fg:6"
