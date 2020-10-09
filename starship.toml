@@ -1,3 +1,13 @@
+[aws]
+disabled = true
+
+[cmd_duration]
+disabled = true
+
+[env_var]
+variable = "DP_ENV"
+style = "fg:6"
+
 [git_branch]
 style = "bold yellow"
 
@@ -8,7 +18,3 @@ untracked  = "●"
 modified   = "●"
 staged     = "●"
 deleted    = "●"
-
-[env_var]
-variable = "DP_ENV"
-style = "fg:6"
