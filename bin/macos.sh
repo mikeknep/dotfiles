@@ -13,9 +13,12 @@ brew install git
 git clone git@github.com:mikeknep/dotfiles.git ~/dotfiles
 
 
+# Install stuff via brew
+brew bundle ~/dotfiles/Brewfile --force
+
+
 # Install latest bash
-brew install bash
-sudo vim /etc/shells
+vim /etc/shells
 # Add `/usr/local/bin/bash` to /etc/shells
 chsh -s /usr/local/bin/bash
 
@@ -30,14 +33,6 @@ if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
 EOF
-
-
-# Install some tools via brew
-brew install awscli jq reattach-to-user-namespace tmux warrensbox/tap/tfswitch ripgrep fastmod fzf starship
-
-
-# Install some apps via brewcask
-brew cask install 1password alacritty alfred brave-browser docker dropbox fantastical keybase postico slack spotify tuple zoomus
 
 
 # Install Fira Code

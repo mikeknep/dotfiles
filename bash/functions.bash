@@ -35,7 +35,7 @@ normal_mode() {
 
 
 bump() {
-  brew upgrade
+  brew bundle --file $HOME/dotfiles/Brewfile
   pyenv rehash
 }
 
