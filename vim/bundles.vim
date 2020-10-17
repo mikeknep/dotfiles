@@ -1,7 +1,7 @@
 " Required startup settings for Vundle
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=$HOME/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 

@@ -1,8 +1,8 @@
 # Aliases
 
 ## Navigation
-alias dots='cd ~/dotfiles'
-alias sandbox='cd ~/sandbox'
+alias dots="cd $HOME/dotfiles"
+alias sandbox="cd $HOME/sandbox"
 
 
 ## Misc

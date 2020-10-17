@@ -1,4 +1,4 @@
-# Copy ssh keys from old computer to ~/.ssh
+# Copy ssh keys from old computer to $HOME/.ssh
 
 
 # Install Homebrew
@@ -10,11 +10,11 @@ brew install git
 
 
 # Clone dotfiles
-git clone git@github.com:mikeknep/dotfiles.git ~/dotfiles
+git clone git@github.com:mikeknep/dotfiles.git $HOME/dotfiles
 
 
 # Install stuff via brew
-brew bundle ~/dotfiles/Brewfile --force
+brew bundle $HOME/dotfiles/Brewfile --force
 
 
 # Install latest bash
@@ -24,13 +24,13 @@ chsh -s /usr/local/bin/bash
 
 
 # Install Vundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 
 
 # Set up bash profile
-cat >~/.bash_profile <<EOF
-if [ -f ~/.bashrc ]; then
-  source ~/.bashrc
+cat >$HOME/.bash_profile <<EOF
+if [ -f $HOME/.bashrc ]; then
+  source $HOME/.bashrc
 fi
 EOF
 
@@ -42,4 +42,4 @@ EOF
 
 # Symlink dotfiles
 # NOTE: Needs to be done *after* alacritty has been installed, opened, and FiraCode font has been added, otherwise fails silently
-~/dotfiles/bin/symlink-all.sh
+$HOME/dotfiles/bin/symlink-all.sh

@@ -27,10 +27,10 @@ bundle install
 
 
 presentation_mode() {
-  sed -i '' -E "s/size: [0-9]+/size: 18/g" ~/dotfiles/.alacritty.yml
+  sed -i '' -E "s/size: [0-9]+/size: 18/g" $HOME/dotfiles/.alacritty.yml
 }
 normal_mode() {
-  sed -i '' -E "s/size: [0-9]+/size: 12/g" ~/dotfiles/.alacritty.yml
+  sed -i '' -E "s/size: [0-9]+/size: 12/g" $HOME/dotfiles/.alacritty.yml
 }
 
 
@@ -41,17 +41,17 @@ bump() {
 
 
 light_mode() {
-  sed -i '' -E "s%colorscheme .*%colorscheme solarized%g" ~/dotfiles/vim/settings.vim
-  sed -i '' -E "s%set background=.*%set background=light%g" ~/dotfiles/vim/settings.vim
-  sed -i '' -E "s%colors: .+%colors: \*solarized_light%g" ~/dotfiles/.alacritty.yml
-  sed -i '' -E "s%source-file .* # colors%source-file ~\\/dotfiles\\/tmux\\/light.conf # colors%g" ~/dotfiles/.tmux.conf
-  tmux source ~/dotfiles/.tmux.conf
+  sed -i '' -E "s%colorscheme .*%colorscheme solarized%g" $HOME/dotfiles/vim/settings.vim
+  sed -i '' -E "s%set background=.*%set background=light%g" $HOME/dotfiles/vim/settings.vim
+  sed -i '' -E "s%colors: .+%colors: \*solarized_light%g" $HOME/dotfiles/.alacritty.yml
+  sed -i '' -E "s%source-file .* # colors%source-file $HOME\\/dotfiles\\/tmux\\/light.conf # colors%g" $HOME/dotfiles/.tmux.conf
+  tmux source $HOME/dotfiles/.tmux.conf
 }
 
 dark_mode() {
-  sed -i '' -E "s%colorscheme .*%colorscheme gruvbox%g" ~/dotfiles/vim/settings.vim
-  sed -i '' -E "s%set background=.*%set background=dark%g" ~/dotfiles/vim/settings.vim
-  sed -i '' -E "s%colors: .+%colors: \*gruvbox_dark%g" ~/dotfiles/.alacritty.yml
-  sed -i '' -E "s%source-file .* # colors%source-file ~\\/dotfiles\\/tmux\\/dark.conf # colors%g" ~/dotfiles/.tmux.conf
-  tmux source ~/dotfiles/.tmux.conf
+  sed -i '' -E "s%colorscheme .*%colorscheme gruvbox%g" $HOME/dotfiles/vim/settings.vim
+  sed -i '' -E "s%set background=.*%set background=dark%g" $HOME/dotfiles/vim/settings.vim
+  sed -i '' -E "s%colors: .+%colors: \*gruvbox_dark%g" $HOME/dotfiles/.alacritty.yml
+  sed -i '' -E "s%source-file .* # colors%source-file $HOME\\/dotfiles\\/tmux\\/dark.conf # colors%g" $HOME/dotfiles/.tmux.conf
+  tmux source $HOME/dotfiles/.tmux.conf
 }
