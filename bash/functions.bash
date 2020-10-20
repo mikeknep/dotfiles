@@ -35,8 +35,9 @@ normal_mode() {
 
 
 bump() {
-  brew bundle --file $HOME/dotfiles/Brewfile
+  brew bundle --cleanup --file $HOME/dotfiles/Brewfile
   pyenv rehash
+  rbenv rehash
 }
 
 
