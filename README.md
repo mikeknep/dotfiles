@@ -24,15 +24,14 @@ git clone git@github.com:mikeknep/dotfiles.git $HOME/dotfiles
 git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 ```
 
-- [ ] Symlink dotfiles
-- :warning: Needs to be done *after* alacritty has been installed, opened, and FiraCode font has been added, otherwise fails silently
-```sh
-$HOME/dotfiles/bin/symlink-all.sh
-```
-
 - [ ] Install brew deps
 ```sh
-bump
+brew bundle --no-lock --cleanup --file $HOME/dotfiles/Brewfile
+```
+
+- [ ] Symlink dotfiles
+```sh
+$HOME/dotfiles/bin/symlink-all.sh
 ```
 
 
