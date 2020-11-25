@@ -10,7 +10,7 @@ export PATH=$PATH:$HOMEBREW_BINARIES:$CARGO_BINARIES:$PERSONAL_BINARIES:$GO_BINA
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# Source other bash files
-for f in ~/dotfiles/bash/*.bash; do source $f; done
+# Source other shell files
+for f in ~/dotfiles/shell/*; do source $f; done
 
-eval "$(starship init bash)"
+eval "$(starship init zsh)"

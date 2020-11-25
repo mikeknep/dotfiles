@@ -1,16 +1,43 @@
 # Dotfiles
 
+### Setup
+
+- [ ] Copy ssh keys from old computer to $HOME/.ssh
+
+- [ ] Install Homebrew
+```sh
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+- [ ] Install latest git
+```sh
+brew install git
+```
+
+- [ ] Clone dotfiles
+```sh
+git clone git@github.com:mikeknep/dotfiles.git $HOME/dotfiles
+```
+
+- [ ] Install Vundle
+```sh
+git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+```
+
+- [ ] Symlink dotfiles
+- :warning: Needs to be done *after* alacritty has been installed, opened, and FiraCode font has been added, otherwise fails silently
+```sh
+$HOME/dotfiles/bin/symlink-all.sh
+```
+
+- [ ] Install brew deps
+```sh
+bump
+```
+
+
+
 ### Secrets
 
-Files named `secret*` are gitignored, but sourced by `.bashrc` and `.gitconfig`.
+Files named `secret*` are gitignored, but sourced by `.zshrc` and `.gitconfig`.
 Useful for sensitive data like environment variables, private project gitconfigs, etc.
-
-### Setup scripts
-
-`bin/symlink-all.sh` sets up all necessary symlinks
-
-
-### Notes for anyone cloning these dotfiles
-
-- MacOS script is more a walkthrough than an automatable setup script
-- Remember to change your git user credentials in `.gitconfig`
