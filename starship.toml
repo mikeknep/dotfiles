@@ -1,15 +1,14 @@
-[aws]
-disabled = true
-
-[cmd_duration]
-disabled = true
+format="""
+$directory$env_var$git_branch$git_state$git_status
+$status$character\
+"""
 
 [env_var]
 variable = "DP_ENV"
-style = "fg:6"
+style = "purple"
 
 [git_branch]
-style = "bold yellow"
+style = "yellow"
 
 [git_status]
 format = "[($untracked)](blue)[($modified)](yellow)[($deleted)](red)[($staged)](green) "
