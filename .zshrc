@@ -13,6 +13,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Source other shell files
 for f in ~/dotfiles/shell/*; do source $f; done
 
+fpath=(/usr/local/share/zsh-completions $fpath)
+autoload -Uz compinit && compinit -u
+
 bindkey -e
 
 eval "$(starship init zsh)"
