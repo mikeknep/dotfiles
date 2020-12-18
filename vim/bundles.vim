@@ -23,6 +23,8 @@ Plugin 'fatih/vim-go'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'felipesere/search'
+Plugin 'neoclide/coc.nvim'
+
 
 "" syntax highlighting
 Plugin 'guns/vim-clojure-static'
