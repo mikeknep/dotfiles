@@ -32,6 +32,12 @@ presentation_mode() {
 normal_mode() {
   sed -i '' -E "s/size: [0-9]+/size: 12/g" $HOME/dotfiles/.alacritty.yml
 }
+fourteen() {
+  sed -i '' -E "s/size: [0-9]+/size: 14/g" $HOME/dotfiles/.alacritty.yml
+}
+sixteen() {
+  sed -i '' -E "s/size: [0-9]+/size: 16/g" $HOME/dotfiles/.alacritty.yml
+}
 
 
 bump() {
@@ -55,4 +61,8 @@ dark_mode() {
   sed -i '' -E "s%colors: .+%colors: \*gruvbox_dark%g" $HOME/dotfiles/.alacritty.yml
   sed -i '' -E "s%source-file .* # colors%source-file $HOME\\/dotfiles\\/tmux\\/dark.conf # colors%g" $HOME/dotfiles/.tmux.conf
   tmux source $HOME/dotfiles/.tmux.conf
+}
+
+unaws() {
+  unset AWS_ACCESS_KEY_ID AWS_ACCOUNT_ID AWS_DEFAULT_REGION AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN DP_ENV
 }
