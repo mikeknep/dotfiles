@@ -3,13 +3,25 @@
         email = michaelrknepper@gmail.com
 [push]
         default = simple
-[color]
-        diff = true
-[color "diff"]
-        meta = yellow
 [core]
         excludesfile = ~/dotfiles/git/ignore
         editor = vim
+        pager = delta
+[interactive]
+        diffFilter = delta
+[delta]
+        features = decorations
+        syntax-theme      = Nord
+        plus-style        = "syntax #2d4a16"
+        plus-emph-style   = "#ffffff #6B8C4F"
+        minus-style       = "syntax #60141B"
+        minus-emph-style  = "#ffffff #88323A"
+[delta "decorations"]
+        commit-decoration-style = "bold #fabd2f box ul"
+        file-style = "bold #fabd2f ul"
+        file-decoration-style = "#fabd2f box"
+        hunk-header-style = omit
+        hunk-header-decoration-style = "#fabd2f box"
 [alias]
         st = status
         ci = commit
