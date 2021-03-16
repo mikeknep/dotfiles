@@ -57,7 +57,3 @@ dark_mode() {
   sed -i '' -E "s%source-file .* # colors%source-file $HOME\\/dotfiles\\/tmux\\/dark.conf # colors%g" $HOME/dotfiles/.tmux.conf
   tmux source $HOME/dotfiles/.tmux.conf
 }
-
-unaws() {
-  unset AWS_ACCESS_KEY_ID AWS_ACCOUNT_ID AWS_DEFAULT_REGION AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN DP_ENV
-}
