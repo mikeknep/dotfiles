@@ -2,7 +2,7 @@
 
 ### Setup
 
-- [ ] Copy ssh keys from old computer to $HOME/.ssh
+- [ ] Copy ssh keys from old computer to $HOME/.ssh (or generate new ones!)
 
 - [ ] Install Homebrew
 ```sh
@@ -40,3 +40,13 @@ $HOME/dotfiles/bin/symlink-all.sh
 
 Files named `secret*` are gitignored, but sourced by `.zshrc` and `.gitconfig`.
 Useful for sensitive data like environment variables, private project gitconfigs, etc.
+
+```
+# shell/secret.sh
+export SENSITIVE_GLOBAL_VAR='abc'
+
+
+# git/secret
+[includeIf "gitdir:~/sensitive/dir/"]
+    path = ~/sensitive/dir/.gitconfig
+```
