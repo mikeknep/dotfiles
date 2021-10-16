@@ -12,8 +12,9 @@ let g:ctrlp_abbrev = {
     \ }
 
 
-" elm
+" Formatting on save is good for you
 let g:elm_format_autosave = 1
+let g:rustfmt_autosave = 1
 
 
 " gruvbox

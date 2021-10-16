@@ -24,13 +24,13 @@ Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'felipesere/search'
 Plugin 'neoclide/coc.nvim'
+Plugin 'rust-lang/rust.vim'
 
 
 "" syntax highlighting
 Plugin 'guns/vim-clojure-static'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'elixir-lang/vim-elixir'
-Plugin 'wting/rust.vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'elmcast/elm-vim'
