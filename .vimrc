@@ -11,15 +11,29 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'morhetz/gruvbox'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown'
 Plug 'vim-scripts/tComment'
 
+if has("nvim")
+  Plug 'nvim-lua/lsp_extensions.nvim'
+  Plug 'nvim-lua/completion-nvim'
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
+endif
+
 call plug#end()
 filetype plugin indent on
+
+
+if has("nvim")
+  source $HOME/dotfiles/neovim/main.lua
+endif
 
 
 " Formatting on save is good for you
