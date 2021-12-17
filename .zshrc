@@ -1,5 +1,25 @@
 export EDITOR='vim'
 
+
+alias ll='ls -AFGgohl'
+alias dots="cd $HOME/dotfiles"
+alias sandbox="cd $HOME/sandbox"
+
+alias g='git'
+alias gs='git status'
+alias gp='git push'
+alias gpl='git pull'
+alias gaa='git add -A'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gca='git commit --amend'
+alias grh='git reset --hard'
+alias gl='git lg -15'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gb='git branch'
+
+
 HOMEBREW_BINARIES=/usr/local/bin
 CARGO_BINARIES=$HOME/.cargo/bin
 PERSONAL_BINARIES=$HOME/dotfiles/bin
