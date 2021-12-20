@@ -27,9 +27,9 @@
         c = commit
         br = branch
         lg = log --graph --pretty=format:'%C(magenta)%h %C(green)(%cr) %C(reset)%s %C(blue)<%an>%C(yellow)%d%C(reset)'
-[include]
-        path = ~/dotfiles/git/secret
 [pull]
         rebase = true
 [init]
         defaultBranch = main
+[include]
+        path = ~/dotfiles/secrets/gitconfig
