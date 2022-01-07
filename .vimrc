@@ -6,16 +6,13 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'elmcast/elm-vim'
 Plug 'fatih/vim-go'
 Plug 'felipesere/search'
-Plug 'hashivim/vim-terraform'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'leafgarland/typescript-vim'
 Plug 'morhetz/gruvbox'
-Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-markdown'
 Plug 'vim-scripts/tComment'
+Plug 'sheerun/vim-polyglot'
 
 if has("nvim")
   Plug 'nvim-lua/lsp_extensions.nvim'
@@ -38,6 +35,7 @@ endif
 
 " Formatting on save is good for you
 let g:elm_format_autosave = 1
+let g:go_fmt_autosave = 1
 let g:rustfmt_autosave = 1
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
