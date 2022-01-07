@@ -26,34 +26,31 @@ local on_attach = function(client, bufnr)
   require'completion'.on_attach(client)
 end
 
-local servers = { "rust_analyzer" }
-for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
-    on_attach = on_attach,
-    flags = {
-      debounce_text_changes = 150,
-    },
-    settings = {
-      ["rust-analyzer"] = {
-        assist = {
-          importGranularity = "module",
-          importPrefix = "by_self",
-        },
-        cargo = {
-          loadOutDirsFromCheck = true
-        },
-        -- procMacro = {
-        --   enable = false
-        -- },
-        checkOnSave = {
-          extraArgs = {
-            "--target-dir", "/tmp/rust-analyzer-check"
-          }
+nvim_lsp["rust_analyzer"].setup {
+  on_attach = on_attach,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  settings = {
+    ["rust-analyzer"] = {
+      assist = {
+        importGranularity = "module",
+        importPrefix = "by_self",
+      },
+      cargo = {
+        loadOutDirsFromCheck = true
+      },
+      -- procMacro = {
+      --   enable = false
+      -- },
+      checkOnSave = {
+        extraArgs = {
+          "--target-dir", "/tmp/rust-analyzer-check"
         }
       }
     }
   }
-end
+}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -64,7 +61,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   }
 )
 
-local actions = require "telescope.actions"
 require('telescope').setup{
   defaults = {
     mappings = {
