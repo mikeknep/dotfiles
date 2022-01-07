@@ -8,18 +8,19 @@ local on_attach = function(client, bufnr)
   --Enable completion triggered by <c-x><c-o>
   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
+  tele = require('telescope.builtin')
+
   -- Only hook these mappings up when there is a LSP client attached
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
---  map('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
---  map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
---  map('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-  map('n', 'K', '<Cmd> lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
-  map('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  map('n', '<leader>a', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-  map('n', '<leader>q', "<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<cr>", opts)
-  map('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
-  map('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
---  map('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  map('n', 'gd',          '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
+  map('n', 'gi',          '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
+  map('n', 'K',           '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
+  map('n', '<leader>rn',  '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
+  map('n', '<leader>a',   '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+  map('n', '<leader>ref', '<cmd>lua tele.lsp_references()<cr>', opts)
+  map('n', '<leader>d',   '<cmd>lua tele.lsp_document_symbols()<cr>', opts)
+  map('n', '<leader>q',   '<cmd>lua tele.lsp_workspace_symbols()<cr>', opts)
+  map('n', '<leader>k',   '<cmd>lua vim.diagnostic.goto_prev()<cr>', opts)
+  map('n', '<leader>j',   '<cmd>lua vim.diagnostic.goto_next()<cr>', opts)
 
   -- Forward to other plugins
   require'completion'.on_attach(client)
