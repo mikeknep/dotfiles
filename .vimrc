@@ -12,6 +12,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/tComment'
+Plug 'vim-test/vim-test'
 
 if has("nvim")
   Plug 'neovim/nvim-lspconfig'
@@ -108,3 +109,6 @@ vmap <C-f><C-r> :s/
 map <c-p> :execute 'FZF'<CR>
 nmap <silent> <Leader>s :execute 'FindUnderCursor'<CR>
 vmap <silent> <Leader>s :call FindText()<CR>
+
+" Tests
+nmap <silent> <leader>t :TestFile<CR>
