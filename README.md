@@ -2,24 +2,25 @@
 
 ### Setup
 
-- [ ] Copy ssh keys from old computer to $HOME/.ssh (or generate new ones!)
-
-- [ ] Install Homebrew
+- [ ] Create new ssh key and add to GitHub
 ```sh
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+ssh-keygen -t ed25519 -C "<description>"
+```
+Be sure to create a `~/.ssh/config` file if you use a non-standard key name (e.g. "github")
+```sh
+Host github.com
+    Hostname github.com
+    IdentityFile ~/.ssh/github
 ```
 
-- [ ] Install latest git
-```sh
-brew install git
-```
+- [ ] Install [Homebrew](https://brew.sh)
 
 - [ ] Clone dotfiles
 ```sh
 git clone git@github.com:mikeknep/dotfiles.git $HOME/dotfiles
 ```
 
-- [ ] Install vim-plug
+- [ ] Install [vim-plug](https://github.com/junegunn/vim-plug)
 ```sh
 # vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
