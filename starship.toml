@@ -1,11 +1,7 @@
 format="""
-$directory$env_var$git_branch$git_state$git_status
+$directory$git_branch$git_state$git_status
 $status$character\
 """
-
-[env_var]
-variable = "DP_ENV"
-style = "purple"
 
 [git_branch]
 style = "yellow"
