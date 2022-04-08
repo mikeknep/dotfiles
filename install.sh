@@ -13,6 +13,6 @@ echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
 cp ./.gitconfig ~/.gitconfig
 
 # Starship prompt
-curl -sS https://starship.rs/install.sh | sh
+curl -sS https://starship.rs/install.sh | sh -s -- -y
 echo 'eval "$(starship init bash)"' >> ~/.bashrc
 cp ./starship.toml ~/.config/starship.toml
