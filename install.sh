@@ -5,7 +5,7 @@
 
 
 # Aliases
-cat ./shell/alias.sh >> ~/.bashrc
+cp ./shell/aliases.sh ~/.bash_aliases
 
 # Git
 curl -sS https://webinstall.dev/delta | bash
