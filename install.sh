@@ -10,6 +10,7 @@ cp ./shell/aliases.sh ~/.bash_aliases
 # Git
 curl -sS https://webinstall.dev/delta | bash
 echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
+echo 'export GIT_EDITOR="code --wait"' >> ~/.bashrc
 cp ./.gitconfig ~/.gitconfig
 
 # Starship prompt
