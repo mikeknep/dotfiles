@@ -5,7 +5,7 @@ PYENV_ROOT=$HOME/.pyenv
 USER_LOCAL_BINARIES=$HOME/.local/bin
 
 export PATH=$PATH:$HOMEBREW_BINARIES:$CARGO_BINARIES:$GO_BINARIES:$PYENV_ROOT:$USER_LOCAL_BINARIES
-export EDITOR='vim'
+export EDITOR='nvim'
 
 eval "$(pyenv init --path)"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi

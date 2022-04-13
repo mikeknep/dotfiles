@@ -4,7 +4,7 @@
         default = simple
 [core]
         excludesfile  = ~/dotfiles/git/ignore
-        editor        = vim
+        editor        = nvim
         pager         = delta
 [interactive]
         diffFilter = delta
