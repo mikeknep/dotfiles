@@ -19,3 +19,4 @@ ln -s /squashfs-root/AppRun /usr/bin/nvim
 # Symlink dotfiles
 dotfiles_dir=$(dirname "$(readlink -f "$0")")
 $dotfiles_dir/bin/symlink-all.sh
+ln -s /workspaces/.codespaces/.persistedshare/dotfiles ~/dotfiles
