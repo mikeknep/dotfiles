@@ -19,4 +19,5 @@ autoload -Uz compinit && compinit -u
 
 bindkey -e
 
+eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"

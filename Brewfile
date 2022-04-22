@@ -8,6 +8,7 @@ tap "homebrew/services"
 tap "warrensbox/tap"
 
 brew "awscli"
+brew "direnv"
 brew "elm"
 brew "fastmod"
 brew "fzf"
