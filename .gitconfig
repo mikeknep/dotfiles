@@ -26,6 +26,8 @@
         c = commit
         br = branch
         lg = log --graph --pretty=format:'%C(magenta)%h %C(green)(%cr) %C(reset)%s %C(blue)<%an>%C(yellow)%d%C(reset)'
+[push]
+        autoSetupRemote = true
 [pull]
         rebase = true
 [init]
