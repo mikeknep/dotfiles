@@ -8,6 +8,8 @@
         pager         = delta
 [interactive]
         diffFilter = delta
+[add.interactive]
+        useBuiltin = false
 [delta]
         features          = decorations
         syntax-theme      = Nord
