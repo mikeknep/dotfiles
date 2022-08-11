@@ -106,6 +106,7 @@ nmap <C-f><C-r> :%s/
 vmap <C-f><C-r> :s/
 
 " Searching
+let $FZF_DEFAULT_COMMAND="rg --files --hidden"
 map <c-p> :execute 'FZF'<CR>
 nmap <silent> <Leader>s :execute 'FindUnderCursor'<CR>
 vmap <silent> <Leader>s :call FindText()<CR>
