@@ -15,6 +15,9 @@ Plug 'vim-scripts/tComment'
 Plug 'vim-test/vim-test'
 
 if has("nvim")
+  Plug 'MunifTanjim/nui.nvim'
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'nvim-neo-tree/neo-tree.nvim', {'branch': 'v2.x'}
   Plug 'neovim/nvim-lspconfig'
   Plug 'nvim-lua/completion-nvim'
   Plug 'nvim-lua/lsp_extensions.nvim'
@@ -22,6 +25,7 @@ if has("nvim")
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
+  Plug 'williamboman/mason.nvim'
 endif
 
 call plug#end()

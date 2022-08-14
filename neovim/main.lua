@@ -1,3 +1,4 @@
+require("mason").setup()
 local opts = {noremap = true, silent = true}
 local map = vim.api.nvim_set_keymap
 
@@ -25,6 +26,11 @@ local on_attach = function(client, bufnr)
   -- Forward to other plugins
   require'completion'.on_attach(client)
 end
+
+nvim_lsp["pylsp"].setup {
+  on_attach = on_attach,
+  settings = {}
+}
 
 nvim_lsp["rust_analyzer"].setup {
   on_attach = on_attach,

@@ -45,5 +45,6 @@ brew "warrensbox/tap/tfswitch"
 
 cask "alacritty"
 cask "font-fira-code"
+cask "font-fira-code-nerd-font"
 
 instance_eval(File.read("#{ENV['HOME']}/dotfiles/secrets/Brewfile")) if File.exist?("#{ENV['HOME']}/dotfiles/secrets/Brewfile")
