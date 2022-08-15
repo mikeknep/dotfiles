@@ -60,10 +60,21 @@ vim.keymap.set("n", "<C-p>", ":execute 'FZF'<CR>")
 
 vim.env.FZF_DEFAULT_COMMAND = "rg --files --hidden"
 
+require("neo-tree").setup({
+  filesystem = {
+    filtered_items = {
+      hide_dotfiles = false,
+      always_show = {
+        ".github",
+        "zzz-mk",
+      }
+    }
+  }
+})
+
 -- TODO:
 -- clean up ./neovim/main.lua, and maybe just dunk it all into this file
 -- mason-lspconfig bridge (esp. for auto-requirements)
 -- decide on trim trailing whitespace (vim: autocmd BufWritePre ...)
 -- colors (consider switching to https://github.com/ellisonleao/gruvbox.nvim)
--- configure Neotree to liking (hidden files?, fewer icons?)
 -- check if any more vim options can be removed (e.g. setting to default)
