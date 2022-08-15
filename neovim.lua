@@ -17,7 +17,7 @@ Plug("nvim-lua/completion-nvim")
 Plug("nvim-lua/lsp_extensions.nvim")
 Plug("nvim-lua/plenary.nvim")
 Plug("nvim-telescope/telescope.nvim")
-Plug("nvim-treesitter/nvim-treesitter", {["do"]: ":TSUpdate"})
+Plug("nvim-treesitter/nvim-treesitter", {["do"] = ":TSUpdate"})
 Plug("WhoIsSethDaniel/toggle-lsp-diagnostics.nvim")
 Plug("MunifTanjim/nui.nvim")
 Plug("kyazdani42/nvim-web-devicons")
@@ -33,11 +33,8 @@ vim.opt.expandtab = true
 vim.opt.hlsearch = true
 vim.opt.ignorecase = true
 vim.opt.incsearch = true
-vim.opt.list = "tab:»·,trail:·"
+vim.opt.list = true
 vim.opt.listchars = "tab:»·,trail:·"
-vim.opt.nostartofline = true
-vim.opt.noswapfile = true
-vim.opt.nowrap = true
 vim.opt.number = true
 vim.opt.scrolloff = 4
 vim.opt.shiftwidth = 2
@@ -45,7 +42,10 @@ vim.opt.showcmd = true
 vim.opt.smartcase = true
 vim.opt.softtabstop = 2
 vim.opt.splitright = true
+vim.opt.startofline = false
+vim.opt.swapfile = false
 vim.opt.tabstop = 2
+vim.opt.wrap = false
 
 vim.g.elm_format_autosave = 1
 vim.g.go_fmt_autosave = 1
