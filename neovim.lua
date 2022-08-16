@@ -6,7 +6,7 @@ Plug("elmcast/elm-vim")
 Plug("fatih/vim-go")
 Plug("junegunn/fzf")
 Plug("junegunn/fzf.vim")
-Plug("morhetz/gruvbox")
+Plug("gruvbox-community/gruvbox")
 Plug("sheerun/vim-polyglot")
 Plug("tpope/vim-fugitive")
 Plug("vim-scripts/tComment")
@@ -26,6 +26,7 @@ Plug("nvim-neo-tree/neo-tree.nvim", { branch = "v2.x" })
 vim.call("plug#end")
 
 vim.opt.autoindent = true
+vim.opt.background = "dark"
 vim.opt.backspace = "indent,eol,start"
 vim.opt.clipboard = "unnamed"
 vim.opt.confirm = true
@@ -60,6 +61,18 @@ vim.keymap.set("n", "<C-p>", ":execute 'FZF'<CR>")
 
 vim.env.FZF_DEFAULT_COMMAND = "rg --files --hidden"
 
+-- It'd be nice to switch to ellisonleao/gruvbox.nvim (lua),
+-- but unfortunately while the colors as rendered by that plugin
+-- are "more correct," I actually prefer the seemingly "incorrect"
+-- way they are rendered by the gruvbox-community/gruvbox plugin.
+-- For example, running the script linked below "fixes" the colors
+-- to "precise gruvbox colors" that indeed match the way they are
+-- rendered by default with ellisonleao/gruvbox.nvim... but they're
+-- so much uglier! I've decided to just leave it alone.
+-- https://github.com/gruvbox-community/gruvbox/wiki/Terminal-specific#a-256-color-gruvbox-palette-shellscript
+vim.g.gruvbox_contrast_dark = "hard"
+vim.cmd("colorscheme gruvbox")
+
 require("neo-tree").setup({
   filesystem = {
     filtered_items = {
@@ -76,5 +89,4 @@ require("neo-tree").setup({
 -- clean up ./neovim/main.lua, and maybe just dunk it all into this file
 -- mason-lspconfig bridge (esp. for auto-requirements)
 -- decide on trim trailing whitespace (vim: autocmd BufWritePre ...)
--- colors (consider switching to https://github.com/ellisonleao/gruvbox.nvim)
 -- check if any more vim options can be removed (e.g. setting to default)
