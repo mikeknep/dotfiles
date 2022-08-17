@@ -79,7 +79,6 @@ require("neo-tree").setup({
     filtered_items = {
       hide_dotfiles = false,
       always_show = {
-        ".github",
         "zzz-mk",
       }
     }
