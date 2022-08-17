@@ -99,23 +99,23 @@ local opts = {noremap = true, silent = true}
 
 local on_attach = function(client, bufnr)
   --Enable completion triggered by <c-x><c-o>
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+  vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
-  tele = require('telescope.builtin')
+  tele = require("telescope.builtin")
 
-  vim.keymap.set('n', 'gd',         vim.lsp.buf.definition, opts)
-  vim.keymap.set('n', 'gi',         vim.lsp.buf.implementation, opts)
-  vim.keymap.set('n', 'K',          vim.lsp.buf.hover, opts)
-  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
-  vim.keymap.set('n', '<leader>a',  vim.lsp.buf.code_action, opts)
-  vim.keymap.set('n', '<leader>r',  tele.lsp_references, opts)
-  vim.keymap.set('n', '<leader>d',  tele.lsp_document_symbols, opts)
-  vim.keymap.set('n', '<leader>q',  tele.lsp_workspace_symbols, opts)
-  vim.keymap.set('n', '<leader>k',  vim.diagnostic.goto_prev, opts)
-  vim.keymap.set('n', '<leader>j',  vim.diagnostic.goto_next, opts)
+  vim.keymap.set("n", "gd",         vim.lsp.buf.definition, opts)
+  vim.keymap.set("n", "gi",         vim.lsp.buf.implementation, opts)
+  vim.keymap.set("n", "K",          vim.lsp.buf.hover, opts)
+  vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+  vim.keymap.set("n", "<leader>a",  vim.lsp.buf.code_action, opts)
+  vim.keymap.set("n", "<leader>r",  tele.lsp_references, opts)
+  vim.keymap.set("n", "<leader>d",  tele.lsp_document_symbols, opts)
+  vim.keymap.set("n", "<leader>q",  tele.lsp_workspace_symbols, opts)
+  vim.keymap.set("n", "<leader>k",  vim.diagnostic.goto_prev, opts)
+  vim.keymap.set("n", "<leader>j",  vim.diagnostic.goto_next, opts)
 end
 
-local nvim_lsp = require('lspconfig')
+local nvim_lsp = require("lspconfig")
 
 -- TODO: gopls
 
@@ -156,7 +156,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   }
 )
 
-require('telescope').setup{
+require("telescope").setup{
   defaults = {
     mappings = {
       i = {
@@ -166,6 +166,6 @@ require('telescope').setup{
   }
 }
 
-require('toggle_lsp_diagnostics').init({
+require("toggle_lsp_diagnostics").init({
   start_on = false,
 })
