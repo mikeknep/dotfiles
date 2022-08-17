@@ -97,7 +97,6 @@ require("mason-lspconfig").setup({
 
 local opts = {noremap = true, silent = true}
 
-local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
   --Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
@@ -115,6 +114,8 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<leader>k',  vim.diagnostic.goto_prev, opts)
   vim.keymap.set('n', '<leader>j',  vim.diagnostic.goto_next, opts)
 end
+
+local nvim_lsp = require('lspconfig')
 
 -- TODO: gopls
 
@@ -165,6 +166,6 @@ require('telescope').setup{
   }
 }
 
-require'toggle_lsp_diagnostics'.init({
+require('toggle_lsp_diagnostics').init({
   start_on = false,
 })
