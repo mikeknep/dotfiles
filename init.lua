@@ -88,8 +88,6 @@ require("neo-tree").setup({
   }
 })
 
--- Begin LSP config
--- TODO: this needs some cleanup
 require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_installed = {"gopls", "pylsp", "rust_analyzer"}
