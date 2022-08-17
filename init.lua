@@ -52,7 +52,11 @@ vim.g.go_fmt_autosave = 1
 vim.g.rustfmt_autosave = 1
 vim.g.terraform_align=1
 vim.g.terraform_fmt_on_save=1
--- TODO: trim trailing whitespace on save
+
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*" },
+  command = [[%s/\s\+$//e]],
+})
 
 vim.keymap.set("n", "<leader><leader>", ":Neotree toggle<CR>")
 vim.keymap.set("n", "<C-f><C-r>", ":%s/")
