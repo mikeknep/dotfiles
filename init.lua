@@ -13,7 +13,6 @@ Plug("vim-scripts/tComment")
 Plug("williamboman/mason.nvim")
 Plug("williamboman/mason-lspconfig.nvim")
 Plug("neovim/nvim-lspconfig")
-Plug("nvim-lua/completion-nvim")
 Plug("nvim-lua/lsp_extensions.nvim")
 Plug("nvim-lua/plenary.nvim")
 Plug("nvim-telescope/telescope.nvim")
@@ -93,29 +92,24 @@ require("mason-lspconfig").setup({
 })
 
 local opts = {noremap = true, silent = true}
-local map = vim.api.nvim_set_keymap
 
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
-  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-
   --Enable completion triggered by <c-x><c-o>
-  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   tele = require('telescope.builtin')
 
-  map('n', 'gd',          '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
-  map('n', 'gi',          '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
-  map('n', 'K',           '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
-  map('n', '<leader>rn',  '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
-  map('n', '<leader>a',   '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
-  map('n', '<leader>ref', '<cmd>lua tele.lsp_references()<cr>', opts)
-  map('n', '<leader>d',   '<cmd>lua tele.lsp_document_symbols()<cr>', opts)
-  map('n', '<leader>q',   '<cmd>lua tele.lsp_workspace_symbols()<cr>', opts)
-  map('n', '<leader>k',   '<cmd>lua vim.diagnostic.goto_prev()<cr>', opts)
-  map('n', '<leader>j',   '<cmd>lua vim.diagnostic.goto_next()<cr>', opts)
-
-  require'completion'.on_attach(client)
+  vim.keymap.set('n', 'gd',         vim.lsp.buf.definition, opts)
+  vim.keymap.set('n', 'gi',         vim.lsp.buf.implementation, opts)
+  vim.keymap.set('n', 'K',          vim.lsp.buf.hover, opts)
+  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
+  vim.keymap.set('n', '<leader>a',  vim.lsp.buf.code_action, opts)
+  vim.keymap.set('n', '<leader>r',  tele.lsp_references, opts)
+  vim.keymap.set('n', '<leader>d',  tele.lsp_document_symbols, opts)
+  vim.keymap.set('n', '<leader>q',  tele.lsp_workspace_symbols, opts)
+  vim.keymap.set('n', '<leader>k',  vim.diagnostic.goto_prev, opts)
+  vim.keymap.set('n', '<leader>j',  vim.diagnostic.goto_next, opts)
 end
 
 -- TODO: gopls
