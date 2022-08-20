@@ -86,6 +86,8 @@ require("neo-tree").setup({
 })
 
 require("mason").setup()
+-- Available LSP servers and their mason-lspconfig names can be found here:
+-- https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
 require("mason-lspconfig").setup({
   ensure_installed = {"gopls", "pylsp", "rust_analyzer", "terraformls"}
 })
