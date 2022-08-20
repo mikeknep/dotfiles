@@ -1,5 +1,6 @@
 [user]
         name  = Mike Knepper
+        email = git@mikeknep.com
 [push]
         default = simple
 [core]
@@ -34,5 +35,5 @@
         rebase = true
 [init]
         defaultBranch = main
-[include]
-        path = ~/dotfiles/secrets/gitconfig
+[includeIf "gitdir:~/code/gretel/"]
+        path = ~/code/gretel/gitconfig

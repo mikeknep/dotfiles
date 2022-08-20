@@ -39,19 +39,5 @@ $HOME/dotfiles/bin/symlink-all.sh
 
 ### Secrets
 
-Files placed in the `secrets/` directory are gitignored, but sourced by `.zshrc` and `.gitconfig`.
-Useful for sensitive data like environment variables, private project gitconfigs, etc.
-
-- `.zshrc` will source all files in the directory ending in `.sh`
-- `.gitconfig` will source just one file in the directory named `gitconfig`
-
-Examples:
-```
-# secrets/foo.sh
-export SENSITIVE_GLOBAL_VAR='abc'
-
-
-# secrets/gitconfig
-[includeIf "gitdir:~/sensitive/dir/"]
-    path = ~/sensitive/dir/.gitconfig
-```
+Files placed in the `secrets/` directory are gitignored, but sourced by `.zshrc`.
+This is particularly useful for exporting sensitive environment variables.
