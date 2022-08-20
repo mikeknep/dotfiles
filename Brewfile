@@ -1,4 +1,5 @@
 tap "aws/tap"
+tap "hashicorp/tap"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -40,6 +41,7 @@ brew "tmux"
 brew "wasm-pack"
 brew "yq"
 
+brew "hashicorp/tap/terraform-ls"
 brew "heroku/brew/heroku"
 brew "warrensbox/tap/tfswitch"
 

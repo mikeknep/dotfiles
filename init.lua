@@ -1,9 +1,7 @@
 local Plug = vim.fn["plug#"]
 vim.call("plug#begin", "~/.config/nvim/plugged")
-
 Plug("christoomey/vim-tmux-navigator")
 Plug("elmcast/elm-vim")
-Plug("fatih/vim-go")
 Plug("junegunn/fzf")
 Plug("junegunn/fzf.vim")
 Plug("gruvbox-community/gruvbox")
@@ -21,7 +19,7 @@ Plug("WhoIsSethDaniel/toggle-lsp-diagnostics.nvim")
 Plug("MunifTanjim/nui.nvim")
 Plug("kyazdani42/nvim-web-devicons")
 Plug("nvim-neo-tree/neo-tree.nvim", { branch = "v2.x" })
-
+Plug("j-hui/fidget.nvim")
 vim.call("plug#end")
 
 vim.opt.autoindent = true
@@ -47,15 +45,14 @@ vim.opt.swapfile = false
 vim.opt.tabstop = 2
 vim.opt.wrap = false
 
-vim.g.elm_format_autosave = 1
-vim.g.go_fmt_autosave = 1
-vim.g.rustfmt_autosave = 1
-vim.g.terraform_align=1
-vim.g.terraform_fmt_on_save=1
-
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
   command = [[%s/\s\+$//e]],
+})
+
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*" },
+  command = [[lua vim.lsp.buf.formatting_sync()]],
 })
 
 vim.keymap.set("n", "<leader><leader>", ":Neotree toggle<CR>")
@@ -90,7 +87,7 @@ require("neo-tree").setup({
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = {"gopls", "pylsp", "rust_analyzer"}
+  ensure_installed = {"gopls", "pylsp", "rust_analyzer", "terraformls"}
 })
 
 local opts = {noremap = true, silent = true}
@@ -115,7 +112,10 @@ end
 
 local nvim_lsp = require("lspconfig")
 
--- TODO: gopls
+nvim_lsp["gopls"].setup {
+  on_attach = on_attach,
+  settings = {}
+}
 
 nvim_lsp["pylsp"].setup {
   on_attach = on_attach,
@@ -145,6 +145,11 @@ nvim_lsp["rust_analyzer"].setup {
   }
 }
 
+nvim_lsp["terraformls"].setup {
+  on_attach = on_attach,
+  settings = {}
+}
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     underline = true,
@@ -167,3 +172,5 @@ require("telescope").setup{
 require("toggle_lsp_diagnostics").init({
   start_on = false,
 })
+
+require("fidget").setup()
