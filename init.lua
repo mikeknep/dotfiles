@@ -121,7 +121,15 @@ nvim_lsp["gopls"].setup {
 
 nvim_lsp["pylsp"].setup {
   on_attach = on_attach,
-  settings = {}
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = {"E501"}
+        }
+      }
+    }
+  }
 }
 
 nvim_lsp["rust_analyzer"].setup {
