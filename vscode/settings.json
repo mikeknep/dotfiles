@@ -1,0 +1,24 @@
+{
+    "editor.fontFamily": "Fira Code",
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "explorer.autoReveal": false,
+    "files.insertFinalNewline": true,
+    "githubPullRequests.terminalLinksHandler": "github",
+    "jupyter.askForKernelRestart": false,
+    "python.terminal.activateEnvironment": false,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "window.nativeFullScreen": false,
+    "workbench.colorTheme": "Nord",
+    "workbench.iconTheme": null,
+    "workbench.startupEditor": "none",
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    }
+}

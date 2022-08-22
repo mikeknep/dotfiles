@@ -1,0 +1,12 @@
+[
+    {
+        "key": "ctrl+q shift+\\",
+        "command": "workbench.action.splitEditorInGroup",
+        "when": "activeEditorCanSplitInGroup"
+    },
+    {
+        "key": "ctrl+q shift+\\",
+        "command": "workbench.action.joinEditorInGroup",
+        "when": "sideBySideEditorActive"
+    }
+]
