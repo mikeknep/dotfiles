@@ -20,6 +20,9 @@ Plug("MunifTanjim/nui.nvim")
 Plug("kyazdani42/nvim-web-devicons")
 Plug("nvim-neo-tree/neo-tree.nvim", { branch = "v2.x" })
 Plug("j-hui/fidget.nvim")
+Plug("rktjmp/lush.nvim")
+Plug("mcchrish/zenbones.nvim")
+Plug("sainnhe/gruvbox-material")
 vim.call("plug#end")
 
 vim.opt.autoindent = true
@@ -43,7 +46,36 @@ vim.opt.splitright = true
 vim.opt.startofline = false
 vim.opt.swapfile = false
 vim.opt.tabstop = 2
+vim.opt.termguicolors = true
 vim.opt.wrap = false
+
+vim.g.gruvbox_material_background = "hard"
+vim.g.gruvbox_material_foreground = "mix"
+
+vim.cmd("colorscheme gruvbox-material")
+
+local function colorswap(background, neovim, alacritty, tmux)
+  vim.opt.background = background
+  vim.cmd(string.format("colorscheme %s", neovim))
+  os.execute('sed -i "" -E "s%colors: .+%colors: \\*' .. alacritty .. '%g" $HOME/dotfiles/.alacritty.yml')
+  os.execute('sed -i "" -E "s%source-file ~\\/dotfiles\\/colors.*%source-file ~\\/dotfiles\\/colors\\/' .. tmux .. '%g" $HOME/dotfiles/.tmux.conf')
+  os.execute('tmux source $HOME/dotfiles/.tmux.conf')
+end
+
+vim.api.nvim_create_user_command(
+  "Light",
+  function()
+    colorswap("light", "neobones", "neobones_light", "tmux-neobones-light.conf")
+  end,
+  {bang=true}
+)
+vim.api.nvim_create_user_command(
+  "Dark",
+  function()
+    colorswap("dark", "gruvbox-material", "gruvbox_dark", "tmux-gruvbox-dark.conf")
+  end,
+  {bang=true}
+)
 
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
@@ -61,18 +93,6 @@ vim.keymap.set("v", "<C-f><C-r>", ":s/")
 vim.keymap.set("n", "<C-p>", ":execute 'FZF'<CR>")
 
 vim.env.FZF_DEFAULT_COMMAND = "rg --files --hidden"
-
--- It'd be nice to switch to ellisonleao/gruvbox.nvim (lua),
--- but unfortunately while the colors as rendered by that plugin
--- are "more correct," I actually prefer the seemingly "incorrect"
--- way they are rendered by the gruvbox-community/gruvbox plugin.
--- For example, running the script linked below "fixes" the colors
--- to "precise gruvbox colors" that indeed match the way they are
--- rendered by default with ellisonleao/gruvbox.nvim... but they're
--- so much uglier! I've decided to just leave it alone.
--- https://github.com/gruvbox-community/gruvbox/wiki/Terminal-specific#a-256-color-gruvbox-palette-shellscript
-vim.g.gruvbox_contrast_dark = "hard"
-vim.cmd("colorscheme gruvbox")
 
 require("neo-tree").setup({
   filesystem = {
