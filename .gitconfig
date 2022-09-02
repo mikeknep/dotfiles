@@ -1,39 +1,52 @@
 [user]
-        name  = Mike Knepper
-        email = git@mikeknep.com
+name  = Mike Knepper
+email = git@mikeknep.com
+
 [push]
-        default = simple
+default = simple
+
 [core]
-        excludesfile  = ~/dotfiles/git/ignore
-        editor        = nvim
-        pager         = delta
+excludesfile  = ~/dotfiles/git/ignore
+editor        = nvim
+pager         = delta
+
 [interactive]
-        diffFilter = delta
+diffFilter = delta
+
 [add.interactive]
-        useBuiltin = false
+useBuiltin = false
+
 [delta]
-        features          = decorations
-        syntax-theme      = Nord
-        plus-style        = "syntax #2d4a16"
-        plus-emph-style   = "#ffffff #6B8C4F"
-        minus-style       = "syntax #60141B"
-        minus-emph-style  = "#ffffff #88323A"
-[delta "decorations"]
-        commit-decoration-style       = "bold #fabd2f box ul"
-        file-style                    = "bold #fabd2f ul"
-        file-decoration-style         = "#fabd2f box"
-        hunk-header-style             = omit
-        hunk-header-decoration-style  = "#fabd2f box"
+features = dark
+
+commit-decoration-style      = "bold yellow box ul"
+file-style                   = "bold yellow"
+file-decoration-style        = "bold yellow box ul"
+hunk-header-style            = "bold blue"
+hunk-header-decoration-style = "blue box"
+
+[delta "light"]
+light = false
+syntax-theme = Monokai Extended Light
+
+[delta "dark"]
+light = false
+syntax-theme = zenburn
+
 [alias]
-        st = status
-        c = commit
-        br = branch
-        lg = log --graph --pretty=format:'%C(magenta)%h %C(green)(%cr) %C(reset)%s %C(blue)<%an>%C(yellow)%d%C(reset)'
+st = status
+c = commit
+br = branch
+lg = log --graph --pretty=format:'%C(magenta)%h %C(green)(%cr) %C(reset)%s %C(blue)<%an>%C(yellow)%d%C(reset)'
+
 [push]
-        autoSetupRemote = true
+autoSetupRemote = true
+
 [pull]
-        rebase = true
+rebase = true
+
 [init]
-        defaultBranch = main
+defaultBranch = main
+
 [includeIf "gitdir:~/code/gretel/"]
-        path = ~/code/gretel/gitconfig
+path = ~/code/gretel/gitconfig

@@ -30,7 +30,7 @@ font:
 
 
 schemes:
-  gruvbox_dark: &gruvbox_dark
+  gruvbox_dark: &dark
     primary:
       background: '0x1d2021'
       foreground: '0xebdbb2'
@@ -52,30 +52,30 @@ schemes:
       magenta: '0xd3869b'
       cyan:    '0x8ec07c'
       white:   '0xebdbb2'
-  neobones_light: &neobones_light
+  rosebones_light: &light
     primary:
-      foreground: '#202E18'
-      background: '#E5EDE6'
+      foreground: '#724341'
+      background: '#FBF6F0'
     cursor:
-      cursor: '#202E18'
-      text: '#E5EDE6'
+      cursor: '#724341'
+      text:   '#FBF6F0'
     normal:
-      black:   '#E5EDE6'
-      red:     '#A8334C'
-      green:   '#567A30'
-      yellow:  '#944927'
-      blue:    '#286486'
-      magenta: '#88507D'
-      cyan:    '#3B8992'
-      white:   '#202E18'
+      black:   '#FBF6F0'
+      red:     '#B5637A'
+      green:   '#286A84'
+      yellow:  '#EC9D33'
+      blue:    '#5795A0'
+      magenta: '#917BA9'
+      cyan:    '#5795A0'
+      white:   '#724341'
     bright:
-      black:   '#B3C6B6'
-      red:     '#94253E'
-      green:   '#3F5A22'
-      yellow:  '#803D1C'
-      blue:    '#1D5573'
-      magenta: '#7B3B70'
-      cyan:    '#2B747C'
-      white:   '#415934'
+      black:   '#E8C48B'
+      red:     '#A54A66'
+      green:   '#1C5970'
+      yellow:  '#C68223'
+      blue:    '#407D88'
+      magenta: '#855AAC'
+      cyan:    '#407D88'
+      white:   '#A4635F'
 
-colors: *gruvbox_dark
+colors: *dark

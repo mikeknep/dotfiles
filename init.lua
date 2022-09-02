@@ -22,7 +22,7 @@ Plug("nvim-neo-tree/neo-tree.nvim", { branch = "v2.x" })
 Plug("j-hui/fidget.nvim")
 Plug("rktjmp/lush.nvim")
 Plug("mcchrish/zenbones.nvim")
-Plug("sainnhe/gruvbox-material")
+Plug("rktjmp/fwatch.nvim")
 vim.call("plug#end")
 
 vim.opt.autoindent = true
@@ -46,36 +46,22 @@ vim.opt.splitright = true
 vim.opt.startofline = false
 vim.opt.swapfile = false
 vim.opt.tabstop = 2
-vim.opt.termguicolors = true
 vim.opt.wrap = false
 
-vim.g.gruvbox_material_background = "hard"
-vim.g.gruvbox_material_foreground = "mix"
+vim.g.gruvbox_contrast_dark = "hard"
 
-vim.cmd("colorscheme gruvbox-material")
-
-local function colorswap(background, neovim, alacritty, tmux)
-  vim.opt.background = background
-  vim.cmd(string.format("colorscheme %s", neovim))
-  os.execute('sed -i "" -E "s%colors: .+%colors: \\*' .. alacritty .. '%g" $HOME/dotfiles/.alacritty.yml')
-  os.execute('sed -i "" -E "s%source-file ~\\/dotfiles\\/colors.*%source-file ~\\/dotfiles\\/colors\\/' .. tmux .. '%g" $HOME/dotfiles/.tmux.conf')
-  os.execute('tmux source $HOME/dotfiles/.tmux.conf')
-end
-
-vim.api.nvim_create_user_command(
-  "Light",
-  function()
-    colorswap("light", "neobones", "neobones_light", "tmux-neobones-light.conf")
-  end,
-  {bang=true}
-)
-vim.api.nvim_create_user_command(
-  "Dark",
-  function()
-    colorswap("dark", "gruvbox-material", "gruvbox_dark", "tmux-gruvbox-dark.conf")
-  end,
-  {bang=true}
-)
+require("color_switcher").setup({
+    on_dark = function()
+      vim.opt.background = "dark"
+      vim.opt.termguicolors = false
+      vim.cmd("colorscheme gruvbox")
+    end,
+    on_light = function()
+      vim.opt.background = "light"
+      vim.opt.termguicolors = true
+      vim.cmd("colorscheme rosebones")
+    end,
+})
 
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
