@@ -11,7 +11,7 @@ editor        = nvim
 pager         = delta
 
 [interactive]
-diffFilter = delta
+diffFilter = delta --color-only
 
 [add.interactive]
 useBuiltin = false
