@@ -24,6 +24,7 @@ file-style                   = "bold yellow"
 file-decoration-style        = "bold yellow box ul"
 hunk-header-style            = "bold blue"
 hunk-header-decoration-style = "blue box"
+side-by-side                 = true
 
 [delta "light"]
 light = false
