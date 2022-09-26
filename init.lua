@@ -125,6 +125,8 @@ nvim_lsp["gopls"].setup {
   settings = {}
 }
 
+-- pylsp stopped working? Check this:
+-- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/lua/mason-lspconfig/server_configurations/pylsp/README.md
 nvim_lsp["pylsp"].setup {
   on_attach = on_attach,
   settings = {
