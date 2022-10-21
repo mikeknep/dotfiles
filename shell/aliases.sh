@@ -16,3 +16,5 @@ alias gl='git lg -15'
 alias gd='git diff'
 alias gds='git diff --staged'
 alias gb='git branch'
+
+alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
