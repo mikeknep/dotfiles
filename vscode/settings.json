@@ -9,7 +9,7 @@
     "python.terminal.activateEnvironment": false,
     "terminal.integrated.defaultProfile.linux": "zsh",
     "window.nativeFullScreen": false,
-    "workbench.colorTheme": "Nord",
+    "workbench.colorTheme": "Rosé Pine Dawn",
     "workbench.iconTheme": null,
     "workbench.startupEditor": "none",
     "[python]": {
