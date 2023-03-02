@@ -20,5 +20,6 @@
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
-    }
+    },
+    "workbench.activityBar.visible": false
 }
