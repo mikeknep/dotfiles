@@ -38,6 +38,7 @@ brew "tealdeer"
 brew "tfsec"
 brew "tmux"
 brew "wasm-pack"
+brew "wget"
 brew "yq"
 
 brew "hashicorp/tap/terraform-ls"
