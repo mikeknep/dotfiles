@@ -15,11 +15,13 @@
     "[python]": {
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
-        }
+        },
+        "editor.formatOnType": true
     },
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
     },
-    "workbench.activityBar.visible": false
+    "workbench.activityBar.visible": false,
+    "githubPullRequests.pullBranch": "never"
 }
