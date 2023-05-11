@@ -23,5 +23,6 @@
         "jupyter-notebook": "left"
     },
     "workbench.activityBar.visible": false,
-    "githubPullRequests.pullBranch": "never"
+    "githubPullRequests.pullBranch": "never",
+    "notebook.output.scrolling": true
 }
