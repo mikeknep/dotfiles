@@ -70,7 +70,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
-  command = [[lua vim.lsp.buf.formatting_sync()]],
+  command = [[lua vim.lsp.buf.format({async=false})]],
 })
 
 vim.keymap.set("n", "<leader><leader>", ":Neotree toggle<CR>")
