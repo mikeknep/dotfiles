@@ -29,6 +29,7 @@ vim.opt.autoindent = true
 vim.opt.background = "dark"
 vim.opt.backspace = "indent,eol,start"
 vim.opt.clipboard = "unnamed"
+vim.opt.cmdheight = 0
 vim.opt.confirm = true
 vim.opt.expandtab = true
 vim.opt.hlsearch = true
