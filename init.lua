@@ -60,6 +60,7 @@ require("color_switcher").setup({
     on_light = function()
       vim.opt.background = "light"
       vim.opt.termguicolors = true
+      vim.api.nvim_set_hl(0, "MsgArea", { fg = 'black', bg = '#ecd0a9' })
       vim.cmd("colorscheme rosebones")
     end,
 })
