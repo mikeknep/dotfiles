@@ -70,11 +70,6 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   command = [[%s/\s\+$//e]],
 })
 
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-  pattern = { "*" },
-  command = [[lua vim.lsp.buf.format({async=false})]],
-})
-
 vim.keymap.set("n", "<leader><leader>", ":Neotree toggle<CR>")
 vim.keymap.set("n", "<C-f><C-r>", ":%s/")
 vim.keymap.set("v", "<C-f><C-r>", ":s/")
