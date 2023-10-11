@@ -9,7 +9,7 @@
     "python.terminal.activateEnvironment": false,
     "terminal.integrated.defaultProfile.linux": "zsh",
     "window.nativeFullScreen": false,
-    "workbench.colorTheme": "Rosé Pine Dawn",
+    "workbench.colorTheme": "Flexoki Light",
     "workbench.iconTheme": null,
     "workbench.startupEditor": "none",
     "[python]": {
@@ -24,5 +24,6 @@
     },
     "workbench.activityBar.visible": false,
     "githubPullRequests.pullBranch": "never",
-    "notebook.output.scrolling": true
+    "notebook.output.scrolling": true,
+    "python.defaultInterpreterPath": "/Users/mike/code/gretel/monogretel/venv"
 }
