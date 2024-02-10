@@ -131,6 +131,9 @@ nvim_lsp["pylsp"].setup {
   settings = {
     pylsp = {
       plugins = {
+        mccabe = {
+          enabled = false
+        },
         pycodestyle = {
           ignore = {"E501", "W503", "E266", "E722"}
         }
