@@ -6,6 +6,7 @@ tap "homebrew/services"
 tap "warrensbox/tap"
 
 brew "awscli"
+brew "difftastic"
 brew "direnv"
 brew "docker"
 brew "elm"
