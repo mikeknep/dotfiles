@@ -135,7 +135,13 @@ nvim_lsp["pylsp"].setup {
           enabled = false
         },
         pycodestyle = {
-          ignore = {"E501", "W503", "E266", "E722"}
+          ignore = {
+            "E266", -- multiple leading '#' for comments
+            "E501", -- line length
+            "E704", -- multiple statements on one line (def)
+            "E722", -- bare 'except'
+            "W503", -- line break before binary operator
+          }
         }
       }
     }
