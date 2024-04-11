@@ -49,6 +49,7 @@ vim.opt.swapfile = false
 vim.opt.tabstop = 2
 vim.opt.wrap = false
 
+vim.g.csv_no_conceal = 1
 vim.g.gruvbox_contrast_dark = "hard"
 
 require("color_switcher").setup({
