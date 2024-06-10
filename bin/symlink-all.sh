@@ -1,6 +1,8 @@
 mkdir -p $HOME/.config/{nvim,tmux}
 
-ln -sf $HOME/dotfiles/.alacritty.yml $HOME/.alacritty.yml
+ln -sf $HOME/dotfiles/alacritty/alacritty.toml $HOME/.alacritty.toml
+ln -sf $HOME/dotfiles/alacritty/dark.toml $HOME/.alacritty-theme.toml
+ln -sf $HOME/dotfiles/alacritty/font_size.toml $HOME/.alacritty-font-size.toml
 ln -sf $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 ln -sf $HOME/dotfiles/.tmux.conf $HOME/.config/tmux/tmux.conf
 ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc

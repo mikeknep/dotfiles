@@ -8,7 +8,8 @@ esac
 mode=$1
 
 ## Alacritty
-sd '^colors: .*' "colors: *${mode}" ~/dotfiles/.alacritty.yml
+ln -sf $HOME/dotfiles/alacritty/${mode}.toml $HOME/.alacritty-theme.toml
+touch $HOME/.alacritty.toml
 
 ## Tmux
 tmux source-file ~/dotfiles/tmux/${mode}.tmux

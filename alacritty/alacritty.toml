@@ -1,0 +1,35 @@
+import = [
+  "~/.alacritty-font-size.toml",
+  "~/.alacritty-theme.toml",
+]
+
+[env]
+TERM = "xterm-256color"
+
+[font.bold]
+family = "MonaspiceNe NFM"
+style = "Regular"
+
+[font.italic]
+family = "MonaspiceNe NFM"
+style = "Italic"
+
+[font.normal]
+family = "MonaspiceNe NFM"
+style = "Regular"
+
+[font.offset]
+y = 8
+
+[[keyboard.bindings]]
+chars = "\u0011"
+key = "Q"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ToggleSimpleFullscreen"
+key = 36
+mods = "Command"
+
+[window]
+startup_mode = "SimpleFullscreen"
