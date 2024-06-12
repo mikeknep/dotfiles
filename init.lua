@@ -141,6 +141,7 @@ nvim_lsp["pylsp"].setup {
             "E501", -- line length
             "E704", -- multiple statements on one line (def)
             "E722", -- bare 'except'
+            "E731", -- assign a lambda expression (e.g. my_func = lambda: "hi")
             "W503", -- line break before binary operator
           }
         }
