@@ -138,6 +138,7 @@ nvim_lsp["pylsp"].setup {
         pycodestyle = {
           ignore = {
             "E266", -- multiple leading '#' for comments
+            "E402", -- module level input not at top of file
             "E501", -- line length
             "E704", -- multiple statements on one line (def)
             "E722", -- bare 'except'
