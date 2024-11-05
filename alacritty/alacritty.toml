@@ -28,9 +28,6 @@ key = "Q"
 mods = "Control"
 
 [[keyboard.bindings]]
-action = "ToggleSimpleFullscreen"
+action = "ToggleFullscreen"
 key = 36
 mods = "Command"
-
-[window]
-startup_mode = "SimpleFullscreen"
