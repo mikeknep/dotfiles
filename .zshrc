@@ -19,3 +19,6 @@ bindkey -e
 
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
+export PATH=$PATH:$HOME/.local/bin/

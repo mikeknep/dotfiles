@@ -9,12 +9,11 @@
     "python.terminal.activateEnvironment": false,
     "terminal.integrated.defaultProfile.linux": "zsh",
     "window.nativeFullScreen": false,
-    "workbench.colorTheme": "Flexoki Light",
     "workbench.iconTheme": null,
     "workbench.startupEditor": "none",
     "[python]": {
         "editor.codeActionsOnSave": {
-            "source.organizeImports": true
+            "source.organizeImports": "explicit"
         },
         "editor.formatOnType": true
     },
@@ -22,8 +21,9 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
-    "workbench.activityBar.visible": false,
     "githubPullRequests.pullBranch": "never",
     "notebook.output.scrolling": true,
-    "python.defaultInterpreterPath": "/Users/mike/code/gretel/monogretel/venv"
+    "python.defaultInterpreterPath": "~/code/monogretel/.venv",
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorTheme": "flexoki-light"
 }
