@@ -23,7 +23,7 @@
     },
     "githubPullRequests.pullBranch": "never",
     "notebook.output.scrolling": true,
-    "python.defaultInterpreterPath": "~/code/monogretel/.venv",
+    "python.defaultInterpreterPath": "/Users/mknepper/code/monogretel/.venv",
     "workbench.activityBar.location": "hidden",
     "workbench.colorTheme": "flexoki-light"
 }
