@@ -146,6 +146,19 @@ nvim_lsp.ruff.setup{
 
 nvim_lsp.basedpyright.setup{
   on_attach = on_attach,
+  settings = {
+    basedpyright = {
+      analysis = {
+        diagnosticSeverityOverrides = {
+          -- https://docs.basedpyright.com/dev/configuration/config-files/#type-check-rule-overrides
+          reportExplicitAny = false,
+          reportMissingTypeStubs = false,
+          reportUnannotatedClassAttribute = false,
+          reportUnknownVariableType = false,
+        }
+      }
+    }
+  }
 }
 
 nvim_lsp["rust_analyzer"].setup {
