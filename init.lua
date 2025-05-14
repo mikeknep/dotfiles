@@ -116,6 +116,8 @@ local on_attach = function(client, bufnr)
   vim.keymap.set("n", "<leader>j",  vim.diagnostic.goto_next, opts)
 end
 
+vim.keymap.set({'i', 'n', 'v'}, '<C-C>', '<esc>', { desc = 'Make Ctrl+C behave exactly like escape.' })
+
 local nvim_lsp = require("lspconfig")
 
 nvim_lsp["gopls"].setup {
