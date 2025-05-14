@@ -125,32 +125,27 @@ nvim_lsp["gopls"].setup {
   settings = {}
 }
 
--- pylsp stopped working? try running:
--- pip install -U python-lsp-server
--- :PylspInstall pyls-flake8 pylsp-mypy pyls-isort
--- More info: https://github.com/williamboman/mason-lspconfig.nvim/blob/main/lua/mason-lspconfig/server_configurations/pylsp/README.md
-nvim_lsp["pylsp"].setup {
+nvim_lsp.ruff.setup{
   on_attach = on_attach,
-  settings = {
-    pylsp = {
-      plugins = {
-        mccabe = {
-          enabled = false
-        },
-        pycodestyle = {
-          ignore = {
-            "E266", -- multiple leading '#' for comments
-            "E402", -- module level input not at top of file
-            "E501", -- line length
-            "E704", -- multiple statements on one line (def)
-            "E722", -- bare 'except'
-            "E731", -- assign a lambda expression (e.g. my_func = lambda: "hi")
-            "W503", -- line break before binary operator
-          }
+  init_options = {
+    settings = {
+      lint = {
+        ignore = {
+          -- https://docs.astral.sh/ruff/rules
+          "D", -- all pydocstyle rules
+          "E266", -- multiple leading '#' for comments
+          "E402", -- module level input not at top of file
+          "E501", -- line length
+          "E722", -- bare 'except'
+          "E731", -- assign a lambda expression (e.g. my_func = lambda: "hi")
         }
       }
     }
   }
+}
+
+nvim_lsp.basedpyright.setup{
+  on_attach = on_attach,
 }
 
 nvim_lsp["rust_analyzer"].setup {
@@ -181,14 +176,13 @@ nvim_lsp["terraformls"].setup {
   settings = {}
 }
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    underline = true,
-    virtual_text = true,
-    signs = false,
-    update_in_insert = false,
-  }
-)
+vim.diagnostic.config({
+  virtual_text = true,
+  underline = true,
+  signs = false,
+  update_in_insert = false,
+})
+
 
 require("telescope").setup{
   defaults = {
@@ -199,9 +193,5 @@ require("telescope").setup{
     }
   }
 }
-
-require("toggle_lsp_diagnostics").init({
-  start_on = false,
-})
 
 require("fidget").setup()
