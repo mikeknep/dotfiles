@@ -49,5 +49,5 @@ rebase = true
 [init]
 defaultBranch = main
 
-[includeIf "gitdir:~/code/gretel/"]
-path = ~/code/gretel/gitconfig
+[includeIf "gitdir:~/code/"]
+path = ~/code/gitconfig
