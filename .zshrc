@@ -6,6 +6,7 @@ HOME_BINARIES=$HOME/bin
 
 export PATH=$PATH:$HOMEBREW_BINARIES:$CARGO_BINARIES:$GO_BINARIES:$USER_LOCAL_BINARIES:$HOME_BINARIES
 export EDITOR='nvim'
+export RIPGREP_CONFIG_PATH=$HOME/dotfiles/.ripgreprc
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 

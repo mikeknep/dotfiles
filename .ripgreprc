@@ -1,0 +1,6 @@
+# Don't let ripgrep vomit really long lines, show a preview instead.
+--max-columns=150
+--max-columns-preview
+
+# Case-insensitive
+--smart-case
