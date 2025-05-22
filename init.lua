@@ -23,6 +23,8 @@ Plug("j-hui/fidget.nvim", { tag = "legacy" })
 Plug("rktjmp/lush.nvim")
 Plug("mcchrish/zenbones.nvim")
 Plug("rktjmp/fwatch.nvim")
+Plug("olimorris/codecompanion.nvim")
+Plug("zbirenbaum/copilot.lua")
 vim.call("plug#end")
 
 vim.opt.autoindent = true
@@ -208,3 +210,40 @@ require("telescope").setup{
 }
 
 require("fidget").setup()
+
+require("copilot").setup()
+
+local adapter = "copilot"
+local cc = require("codecompanion")
+cc.setup({
+  display = {
+    chat = {
+      window = {
+        layout = 'float',
+        height = 0.8,
+        width = 0.8,
+      },
+    },
+  },
+  adapters = {
+    copilot = function()
+      return require('codecompanion.adapters').extend('copilot', {
+          schema = {
+            model = {
+              default = 'claude-3.7-sonnet',
+            },
+          },
+        })
+    end,
+  },
+  strategies = {
+    chat = {
+      adapter = adapter,
+    },
+    inline = {
+      adapter = adapter,
+    },
+  },
+})
+vim.keymap.set('n', '<leader>c', cc.toggle, { silent = true })
+vim.keymap.set('v', '<leader>c', ':CodeCompanionChat Add<CR>')
