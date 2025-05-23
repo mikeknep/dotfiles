@@ -153,10 +153,14 @@ nvim_lsp.basedpyright.setup{
       analysis = {
         diagnosticSeverityOverrides = {
           -- https://docs.basedpyright.com/dev/configuration/config-files/#type-check-rule-overrides
+          reportAny = false,
           reportExplicitAny = false,
           reportMissingTypeStubs = false,
           reportUnannotatedClassAttribute = false,
+          reportUnknownMemberType = false,
           reportUnknownVariableType = false,
+          reportUntypedArgumentType = false,
+          reportUntypedFunctionDecorator = false,
         }
       }
     }
