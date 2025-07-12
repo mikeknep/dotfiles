@@ -25,6 +25,7 @@ Plug("mcchrish/zenbones.nvim")
 Plug("rktjmp/fwatch.nvim")
 Plug("olimorris/codecompanion.nvim")
 Plug("zbirenbaum/copilot.lua")
+Plug("MeanderingProgrammer/render-markdown.nvim")
 vim.call("plug#end")
 
 vim.opt.autoindent = true
@@ -89,6 +90,85 @@ require("neo-tree").setup({
       }
     }
   }
+})
+
+require("render-markdown").setup({
+    -- The configuration docs are really good:
+    -- https://github.com/MeanderingProgrammer/render-markdown.nvim?tab=readme-ov-file#setup
+
+    -- TODOs:
+    -- * The way I'm configuring headers right now is... definitely not "correct". Probably
+    --   should be adjusting things through either gruvbox or treesitter, but the current
+    --   heading settings below work well enough for now.
+    -- * Bold and italics are currently lost/invisible because this plugin hides the */_ characters
+    --   but my global font settings in alacritty keep everything normal. I think I might like
+    --   rendering these with color (red/orange/yellow), but not sure how to configure properly;
+    --   like above, it probably belongs in a gruvbox override rather than here.
+
+    -- Disable left gutter signs across the board
+    sign = {
+      enabled = false
+    },
+
+    -- Disable link icons across the board (they're too small to be useful, only add noise)
+    link = {
+      enabled = false
+    },
+
+    -- Heading style 1
+    -- * Block background highlights
+    -- * No indentation
+    -- heading = {
+    --   -- Background color only spans width of text (not full window) plus 2 padding
+    --   width = "block",
+    --   left_pad = 2,
+    --   right_pad = 2,
+    --
+    --   -- Don't indent h2-h6
+    --   position = "inline",
+    --
+    --   -- Gruvbox colors are ordered strangely by default
+    --   -- (e.g. red is way too aggressive for h4)
+    --   backgrounds = {
+    --     "RenderMarkdownH4Bg", -- red
+    --     "RenderMarkdownH1Bg", -- yellow
+    --     "RenderMarkdownH3Bg", -- teal
+    --     "RenderMarkdownH6Bg", -- grey
+    --     "RenderMarkdownH6Bg", -- grey
+    --     "RenderMarkdownH6Bg", -- grey
+    --   },
+    -- },
+
+    -- Heading syle 2
+    -- * Orange text for all h1-h6, with no background color
+    -- * Indentation for the different hN levels
+    heading = {
+      -- All orange
+      backgrounds = {
+        "RenderMarkdownQuote1",
+      },
+    },
+
+    quote = {
+      -- The default is a nice orange color, but is the same as what I've changed the header text to,
+      -- so this is a teal/aqua color instead
+      highlight = {
+        "RenderMarkdownH3Bg",
+      },
+    },
+
+    code = {
+      -- Background color only spans width of text (not full window)
+      width = "block",
+
+      -- Hide the backticks and language icon+name, but keep the *lines* containing that raw text present
+      -- to provide some nice padding around code
+      style = "normal",
+      border = "thick",
+
+      -- Inline code keeps the same background as normal text
+      highlight_inline = "",
+    },
 })
 
 require("mason").setup()
