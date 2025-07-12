@@ -161,6 +161,7 @@ nvim_lsp.basedpyright.setup{
           reportUnknownVariableType = false,
           reportUntypedArgumentType = false,
           reportUntypedFunctionDecorator = false,
+          reportUnusedCallResult = false,
         }
       }
     }
