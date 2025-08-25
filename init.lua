@@ -235,9 +235,11 @@ nvim_lsp.basedpyright.setup{
           -- https://docs.basedpyright.com/dev/configuration/config-files/#type-check-rule-overrides
           reportAny = false,
           reportExplicitAny = false,
+          reportMissingTypeArgument = false,
           reportMissingTypeStubs = false,
           reportUnannotatedClassAttribute = false,
           reportUnknownMemberType = false,
+          reportUnknownParameterType = false,
           reportUnknownVariableType = false,
           reportUntypedArgumentType = false,
           reportUntypedFunctionDecorator = false,
