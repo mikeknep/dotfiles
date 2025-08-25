@@ -18,7 +18,7 @@ Plug("nvim-treesitter/nvim-treesitter", {["do"] = ":TSUpdate"})
 Plug("WhoIsSethDaniel/toggle-lsp-diagnostics.nvim")
 Plug("MunifTanjim/nui.nvim")
 Plug("kyazdani42/nvim-web-devicons")
-Plug("nvim-neo-tree/neo-tree.nvim", { branch = "v2.x" })
+Plug("nvim-neo-tree/neo-tree.nvim")
 Plug("j-hui/fidget.nvim", { tag = "legacy" })
 Plug("rktjmp/lush.nvim")
 Plug("mcchrish/zenbones.nvim")
@@ -74,7 +74,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   command = [[%s/\s\+$//e]],
 })
 
-vim.keymap.set("n", "<leader><leader>", ":Neotree toggle reveal float<CR>")
+vim.keymap.set("n", "<leader><leader>", ":Neotree toggle source=filesystem reveal=true position=left<CR>")
 vim.keymap.set("n", "<C-f><C-r>", ":%s/")
 vim.keymap.set("v", "<C-f><C-r>", ":s/")
 vim.keymap.set("n", "<C-p>", ":execute 'FZF'<CR>")
