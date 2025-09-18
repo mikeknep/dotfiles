@@ -74,7 +74,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   command = [[%s/\s\+$//e]],
 })
 
-vim.keymap.set("n", "<leader><leader>", ":Neotree toggle source=filesystem reveal=true position=left<CR>")
+vim.keymap.set("n", "<leader><leader>", ":Neotree toggle source=filesystem reveal=true position=float<CR>")
 vim.keymap.set("n", "<C-f><C-r>", ":%s/")
 vim.keymap.set("v", "<C-f><C-r>", ":s/")
 vim.keymap.set("n", "<C-p>", ":execute 'FZF'<CR>")
