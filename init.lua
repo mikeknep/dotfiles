@@ -200,14 +200,13 @@ end
 
 vim.keymap.set({'i', 'n', 'v'}, '<C-C>', '<esc>', { desc = 'Make Ctrl+C behave exactly like escape.' })
 
-local nvim_lsp = require("lspconfig")
 
-nvim_lsp["gopls"].setup {
+vim.lsp.config("gopls", {
   on_attach = on_attach,
   settings = {}
-}
+})
 
-nvim_lsp.ruff.setup{
+vim.lsp.config("ruff", {
   on_attach = on_attach,
   init_options = {
     settings = {
@@ -224,9 +223,9 @@ nvim_lsp.ruff.setup{
       }
     }
   }
-}
+})
 
-nvim_lsp.basedpyright.setup{
+vim.lsp.config("basedpyright", {
   on_attach = on_attach,
   settings = {
     basedpyright = {
@@ -251,9 +250,9 @@ nvim_lsp.basedpyright.setup{
       }
     }
   }
-}
+})
 
-nvim_lsp["rust_analyzer"].setup {
+vim.lsp.config("rust_analyzer", {
   on_attach = on_attach,
   flags = {
     debounce_text_changes = 150,
@@ -274,12 +273,12 @@ nvim_lsp["rust_analyzer"].setup {
       }
     }
   }
-}
+})
 
-nvim_lsp["terraformls"].setup {
+vim.lsp.config("terraformls", {
   on_attach = on_attach,
   settings = {}
-}
+})
 
 vim.diagnostic.config({
   virtual_text = true,
