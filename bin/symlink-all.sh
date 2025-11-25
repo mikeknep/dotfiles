@@ -7,6 +7,7 @@ ln -sf $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 ln -sf $HOME/dotfiles/.tmux.conf $HOME/.config/tmux/tmux.conf
 ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
 ln -sf $HOME/dotfiles/init.lua $HOME/.config/nvim/init.lua
+ln -sf $HOME/dotfiles/nvim/after $HOME/.config/nvim/after
 ln -sf $HOME/dotfiles/nvim/lua $HOME/.config/nvim/lua
 ln -sf $HOME/dotfiles/starship.toml $HOME/.config/starship.toml
 ln -sf $HOME/dotfiles/vscode/keybindings.json $HOME/Library/Application\ Support/Code/User/keybindings.json
