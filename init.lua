@@ -96,7 +96,7 @@ require("mason").setup()
 -- Available LSP servers and their mason-lspconfig names can be found here:
 -- https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
 require("mason-lspconfig").setup({
-  ensure_installed = {"gopls", "pylsp", "rust_analyzer", "terraformls"}
+  ensure_installed = {"gopls", "ruff", "basedpyright", "rust_analyzer", "terraformls"}
 })
 
 local opts = {noremap = true, silent = true}
@@ -200,6 +200,8 @@ vim.lsp.config("terraformls", {
   on_attach = on_attach,
   settings = {}
 })
+
+vim.lsp.enable({ "gopls", "ruff", "basedpyright", "rust_analyzer", "terraformls" })
 
 vim.diagnostic.config({
   virtual_text = true,
