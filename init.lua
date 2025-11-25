@@ -300,39 +300,39 @@ require("telescope").setup{
 
 require("fidget").setup()
 
-require("copilot").setup()
-
-local adapter = "copilot"
-local cc = require("codecompanion")
-cc.setup({
-  display = {
-    chat = {
-      window = {
-        layout = 'float',
-        height = 0.8,
-        width = 0.8,
-      },
-    },
-  },
-  adapters = {
-    copilot = function()
-      return require('codecompanion.adapters').extend('copilot', {
-          schema = {
-            model = {
-              default = 'claude-3.7-sonnet',
-            },
-          },
-        })
-    end,
-  },
-  strategies = {
-    chat = {
-      adapter = adapter,
-    },
-    inline = {
-      adapter = adapter,
-    },
-  },
-})
-vim.keymap.set('n', '<leader>c', cc.toggle, { silent = true })
-vim.keymap.set('v', '<leader>c', ':CodeCompanionChat Add<CR>')
+-- require("copilot").setup()
+--
+-- local adapter = "copilot"
+-- local cc = require("codecompanion")
+-- cc.setup({
+--   display = {
+--     chat = {
+--       window = {
+--         layout = 'float',
+--         height = 0.8,
+--         width = 0.8,
+--       },
+--     },
+--   },
+--   adapters = {
+--     copilot = function()
+--       return require('codecompanion.adapters').extend('copilot', {
+--           schema = {
+--             model = {
+--               default = 'claude-3.7-sonnet',
+--             },
+--           },
+--         })
+--     end,
+--   },
+--   strategies = {
+--     chat = {
+--       adapter = adapter,
+--     },
+--     inline = {
+--       adapter = adapter,
+--     },
+--   },
+-- })
+-- vim.keymap.set('n', '<leader>c', cc.toggle, { silent = true })
+-- vim.keymap.set('v', '<leader>c', ':CodeCompanionChat Add<CR>')
