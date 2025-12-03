@@ -59,10 +59,15 @@ local function adjust_colors()
   vim.api.nvim_set_hl(0, "RenderMarkdownQuote5", { fg = "#458588", ctermfg = 66, force = true })
   vim.api.nvim_set_hl(0, "RenderMarkdownQuote6", { fg = "#458588", ctermfg = 66, force = true })
 
-  -- TODO:
-  -- bold
-  -- italic
-  -- strikethrough?
+  -- Bold and italics set to yellow
+  vim.api.nvim_set_hl(0, "htmlBold", { fg = "#fabd2f", ctermfg = 214, force = true })
+  vim.api.nvim_set_hl(0, "htmlItalic", { fg = "#fabd2f", ctermfg = 214, force = true })
+  -- TODO: strikethrough
+  -- currently double-tilde is getting interpreted as a fenced code block and thus rendering green
+  -- below are attempts to change it to one of gruvbox's greys
+  -- vim.api.nvim_set_hl(0, "htmlStrike", { fg = "#928374", ctermfg = 245, force = true })
+  -- vim.api.nvim_set_hl(0, "TTStrikethrough", { fg = "#928374", ctermfg = 245, force = true })
+  -- vim.api.nvim_set_hl(0, "@markup.strikethrough", { fg = "#928374", ctermfg = 245, force = true })
 end
 
 adjust_colors()
