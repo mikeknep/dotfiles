@@ -33,41 +33,52 @@ require("render-markdown").setup({
 
 
 local function adjust_colors()
+  local orange_fg = "#fe8019"
+  local orange_ct = 208
+
+  local teal_fg = "#458588"
+  local teal_ct = 66
+
+  local yellow_fg = "#fabd2f"
+  local yellow_ct = 214
+
   -- Headers. Set everything to orange.
   -- There are a variety of area groups to set here due to multiple, slightly-overlapping plugins
   -- (vim-polygot, render-markdown) affecting different parts of the line (#, symbol, text).
-  vim.api.nvim_set_hl(0, "mkdHeading", { fg = "#fe8019", ctermfg = 208, force = true })
-  vim.api.nvim_set_hl(0, "mkdHeadingDelimiter", { fg = "#fe8019", ctermfg = 208, force = true })
-  vim.api.nvim_set_hl(0, "htmlH1", { fg = '#fe8019', ctermfg = 208, force = true })
-  vim.api.nvim_set_hl(0, "htmlH2", { fg = '#fe8019', ctermfg = 208, force = true })
-  vim.api.nvim_set_hl(0, "htmlH3", { fg = '#fe8019', ctermfg = 208, force = true })
-  vim.api.nvim_set_hl(0, "htmlH4", { fg = '#fe8019', ctermfg = 208, force = true })
-  vim.api.nvim_set_hl(0, "htmlH5", { fg = '#fe8019', ctermfg = 208, force = true })
-  vim.api.nvim_set_hl(0, "htmlH6", { fg = '#fe8019', ctermfg = 208, force = true })
-  vim.api.nvim_set_hl(0, "RenderMarkdownH1", { fg = '#fe8019', ctermfg = 208, force = true })
-  vim.api.nvim_set_hl(0, "RenderMarkdownH2", { fg = '#fe8019', ctermfg = 208, force = true })
-  vim.api.nvim_set_hl(0, "RenderMarkdownH3", { fg = '#fe8019', ctermfg = 208, force = true })
-  vim.api.nvim_set_hl(0, "RenderMarkdownH4", { fg = '#fe8019', ctermfg = 208, force = true })
-  vim.api.nvim_set_hl(0, "RenderMarkdownH5", { fg = '#fe8019', ctermfg = 208, force = true })
-  vim.api.nvim_set_hl(0, "RenderMarkdownH6", { fg = '#fe8019', ctermfg = 208, force = true })
+  vim.api.nvim_set_hl(0, "mkdHeading", { fg = orange_fg, ctermfg = orange_ct, force = true })
+  vim.api.nvim_set_hl(0, "mkdHeadingDelimiter", { fg = orange_fg, ctermfg = orange_ct, force = true })
+  vim.api.nvim_set_hl(0, "htmlH1", { fg = orange_fg, ctermfg = orange_ct, force = true })
+  vim.api.nvim_set_hl(0, "htmlH2", { fg = orange_fg, ctermfg = orange_ct, force = true })
+  vim.api.nvim_set_hl(0, "htmlH3", { fg = orange_fg, ctermfg = orange_ct, force = true })
+  vim.api.nvim_set_hl(0, "htmlH4", { fg = orange_fg, ctermfg = orange_ct, force = true })
+  vim.api.nvim_set_hl(0, "htmlH5", { fg = orange_fg, ctermfg = orange_ct, force = true })
+  vim.api.nvim_set_hl(0, "htmlH6", { fg = orange_fg, ctermfg = orange_ct, force = true })
+  vim.api.nvim_set_hl(0, "RenderMarkdownH1", { fg = orange_fg, ctermfg = orange_ct, force = true })
+  vim.api.nvim_set_hl(0, "RenderMarkdownH2", { fg = orange_fg, ctermfg = orange_ct, force = true })
+  vim.api.nvim_set_hl(0, "RenderMarkdownH3", { fg = orange_fg, ctermfg = orange_ct, force = true })
+  vim.api.nvim_set_hl(0, "RenderMarkdownH4", { fg = orange_fg, ctermfg = orange_ct, force = true })
+  vim.api.nvim_set_hl(0, "RenderMarkdownH5", { fg = orange_fg, ctermfg = orange_ct, force = true })
+  vim.api.nvim_set_hl(0, "RenderMarkdownH6", { fg = orange_fg, ctermfg = orange_ct, force = true })
 
   -- Block quotes. Set to teal.
-  vim.api.nvim_set_hl(0, "RenderMarkdownQuote1", { fg = "#458588", ctermfg = 66, force = true })
-  vim.api.nvim_set_hl(0, "RenderMarkdownQuote2", { fg = "#458588", ctermfg = 66, force = true })
-  vim.api.nvim_set_hl(0, "RenderMarkdownQuote3", { fg = "#458588", ctermfg = 66, force = true })
-  vim.api.nvim_set_hl(0, "RenderMarkdownQuote4", { fg = "#458588", ctermfg = 66, force = true })
-  vim.api.nvim_set_hl(0, "RenderMarkdownQuote5", { fg = "#458588", ctermfg = 66, force = true })
-  vim.api.nvim_set_hl(0, "RenderMarkdownQuote6", { fg = "#458588", ctermfg = 66, force = true })
+  vim.api.nvim_set_hl(0, "RenderMarkdownQuote1", { fg = teal_fg, ctermfg = teal_ct, force = true })
+  vim.api.nvim_set_hl(0, "RenderMarkdownQuote2", { fg = teal_fg, ctermfg = teal_ct, force = true })
+  vim.api.nvim_set_hl(0, "RenderMarkdownQuote3", { fg = teal_fg, ctermfg = teal_ct, force = true })
+  vim.api.nvim_set_hl(0, "RenderMarkdownQuote4", { fg = teal_fg, ctermfg = teal_ct, force = true })
+  vim.api.nvim_set_hl(0, "RenderMarkdownQuote5", { fg = teal_fg, ctermfg = teal_ct, force = true })
+  vim.api.nvim_set_hl(0, "RenderMarkdownQuote6", { fg = teal_fg, ctermfg = teal_ct, force = true })
 
   -- Bold and italics set to yellow
-  vim.api.nvim_set_hl(0, "htmlBold", { fg = "#fabd2f", ctermfg = 214, force = true })
-  vim.api.nvim_set_hl(0, "htmlItalic", { fg = "#fabd2f", ctermfg = 214, force = true })
+  vim.api.nvim_set_hl(0, "htmlBold", { fg = yellow_fg, ctermfg = yellow_ct, force = true })
+  vim.api.nvim_set_hl(0, "htmlItalic", { fg = yellow_fg, ctermfg = yellow_ct, force = true })
   -- TODO: strikethrough
   -- currently double-tilde is getting interpreted as a fenced code block and thus rendering green
   -- below are attempts to change it to one of gruvbox's greys
-  -- vim.api.nvim_set_hl(0, "htmlStrike", { fg = "#928374", ctermfg = 245, force = true })
-  -- vim.api.nvim_set_hl(0, "TTStrikethrough", { fg = "#928374", ctermfg = 245, force = true })
-  -- vim.api.nvim_set_hl(0, "@markup.strikethrough", { fg = "#928374", ctermfg = 245, force = true })
+  -- local grey_fg = "#928374"
+  -- local grey_ct = 245
+  -- vim.api.nvim_set_hl(0, "htmlStrike", { fg = grey_fg, ctermfg = grey_ct, force = true })
+  -- vim.api.nvim_set_hl(0, "TTStrikethrough", { fg = grey_fg, ctermfg = grey_ct, force = true })
+  -- vim.api.nvim_set_hl(0, "@markup.strikethrough", { fg = grey_fg, ctermfg = grey_ct, force = true })
 end
 
 adjust_colors()
