@@ -13,8 +13,9 @@ alias gcm='git commit -m'
 alias gca='git commit --amend'
 alias grh='git reset --hard'
 alias gl='git lg -15'
-alias gd='git diff'
-alias gds='git diff --staged'
+# --irreversible-delete omits the body of deleted/removed files from the diff
+alias gd='git diff --irreversible-delete'
+alias gds='git diff --irreversible-delete --staged'
 alias gb='git branch'
 
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
