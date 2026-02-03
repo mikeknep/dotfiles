@@ -40,6 +40,7 @@ vim.opt.ignorecase = true
 vim.opt.incsearch = true
 vim.opt.list = true
 vim.opt.listchars = "tab:»·,trail:·"
+vim.opt.modeline = false
 vim.opt.number = true
 vim.opt.scrolloff = 4
 vim.opt.shiftwidth = 2
