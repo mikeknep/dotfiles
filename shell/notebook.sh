@@ -1,4 +1,4 @@
 notebook() {
-  touch "$1.ipynb"
-  code "$1.ipynb"
+  touch "zzz-mk/$1.ipynb"
+  code "zzz-mk/$1.ipynb"
 }
