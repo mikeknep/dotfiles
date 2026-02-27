@@ -31,3 +31,8 @@ mods = "Control"
 action = "ToggleFullscreen"
 key = 36
 mods = "Command"
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
