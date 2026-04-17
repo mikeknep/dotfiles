@@ -23,3 +23,6 @@ eval "$(starship init zsh)"
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 export PATH=$PATH:$HOME/.local/bin/
+
+# opencode
+export PATH=/Users/mknepper/.opencode/bin:$PATH
