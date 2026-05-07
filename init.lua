@@ -8,8 +8,6 @@ Plug("gruvbox-community/gruvbox")
 Plug("sheerun/vim-polyglot")
 Plug("tpope/vim-fugitive")
 Plug("vim-scripts/tComment")
-Plug("williamboman/mason.nvim")
-Plug("williamboman/mason-lspconfig.nvim")
 Plug("neovim/nvim-lspconfig")
 Plug("nvim-lua/lsp_extensions.nvim")
 Plug("nvim-lua/plenary.nvim")
@@ -93,13 +91,6 @@ require("neo-tree").setup({
   }
 })
 
-require("mason").setup()
--- Available LSP servers and their mason-lspconfig names can be found here:
--- https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
-require("mason-lspconfig").setup({
-  ensure_installed = {"gopls", "ruff", "basedpyright", "rust_analyzer", "terraformls"}
-})
-
 local opts = {noremap = true, silent = true}
 
 local on_attach = function(client, bufnr)
@@ -147,32 +138,40 @@ vim.lsp.config("ruff", {
   }
 })
 
-vim.lsp.config("basedpyright", {
+-- Switching python lsp from basedpyright to ty. Leaving the basedpyright config around for a bit
+-- in case there's something I want to steal/port
+vim.lsp.config("ty", {
   on_attach = on_attach,
-  settings = {
-    basedpyright = {
-      analysis = {
-        diagnosticSeverityOverrides = {
-          -- https://docs.basedpyright.com/dev/configuration/config-files/#type-check-rule-overrides
-          reportAny = false,
-          reportDeprecated = false,
-          reportExplicitAny = false,
-          reportImplicitOverride = false,
-          reportImplicitStringConcatenation = false,
-          reportMissingTypeArgument = false,
-          reportMissingTypeStubs = false,
-          reportUnannotatedClassAttribute = false,
-          reportUnknownMemberType = false,
-          reportUnknownParameterType = false,
-          reportUnknownVariableType = false,
-          reportUntypedArgumentType = false,
-          reportUntypedFunctionDecorator = false,
-          reportUnusedCallResult = false,
-        }
-      }
-    }
-  }
+  cmd = { "uv", "run", "ty", "server" },
+  filetypes = { "python" },
+  root_markers = { "pyproject.toml", "uv.lock", ".git" },
 })
+-- vim.lsp.config("basedpyright", {
+--   on_attach = on_attach,
+--   settings = {
+--     basedpyright = {
+--       analysis = {
+--         diagnosticSeverityOverrides = {
+--           -- https://docs.basedpyright.com/dev/configuration/config-files/#type-check-rule-overrides
+--           reportAny = false,
+--           reportDeprecated = false,
+--           reportExplicitAny = false,
+--           reportImplicitOverride = false,
+--           reportImplicitStringConcatenation = false,
+--           reportMissingTypeArgument = false,
+--           reportMissingTypeStubs = false,
+--           reportUnannotatedClassAttribute = false,
+--           reportUnknownMemberType = false,
+--           reportUnknownParameterType = false,
+--           reportUnknownVariableType = false,
+--           reportUntypedArgumentType = false,
+--           reportUntypedFunctionDecorator = false,
+--           reportUnusedCallResult = false,
+--         }
+--       }
+--     }
+--   }
+-- })
 
 vim.lsp.config("rust_analyzer", {
   on_attach = on_attach,
@@ -202,7 +201,7 @@ vim.lsp.config("terraformls", {
   settings = {}
 })
 
-vim.lsp.enable({ "gopls", "ruff", "basedpyright", "rust_analyzer", "terraformls" })
+vim.lsp.enable({ "gopls", "ruff", "ty", "rust_analyzer", "terraformls" })
 
 vim.diagnostic.config({
   virtual_text = true,
