@@ -31,6 +31,13 @@ require("render-markdown").setup({
       -- Inline code keeps the same background as normal text
       highlight_inline = "",
     },
+
+    -- Grey out the whole line of a checked checkbox item
+    checkbox = {
+      checked = {
+        scope_highlight = "RenderMarkdownCheckedScope",
+      },
+    },
 })
 
 
@@ -118,6 +125,9 @@ local function adjust_colors()
   set_hl("TTStrikethrough", { fg = grey_fg, ctermfg = grey_ct, strikethrough = true, cterm = { strikethrough = true } })
   set_hl("@markup.strikethrough", { fg = grey_fg, ctermfg = grey_ct, strikethrough = true, cterm = { strikethrough = true } })
   set_hl("@markup.strikethrough.markdown_inline", { fg = grey_fg, ctermfg = grey_ct, strikethrough = true, cterm = { strikethrough = true } })
+
+  -- Grey out checked checkbox lines (match grey used for strikethrough)
+  set_hl("RenderMarkdownCheckedScope", { fg = grey_fg, ctermfg = grey_ct })
 end
 
 adjust_colors()
