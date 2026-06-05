@@ -23,7 +23,7 @@
     },
     "githubPullRequests.pullBranch": "never",
     "notebook.output.scrolling": true,
-    "python.defaultInterpreterPath": "/Users/mknepper/code/nmp/.venv",
+    "python.defaultInterpreterPath": "/Users/mknepper/code/nemo-platform/.venv",
     "workbench.activityBar.location": "hidden",
     "workbench.colorTheme": "flexoki-light",
     "workbench.secondarySideBar.defaultVisibility": "hidden",
