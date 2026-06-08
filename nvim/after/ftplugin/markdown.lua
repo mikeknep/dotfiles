@@ -14,9 +14,9 @@ require("render-markdown").setup({
       enabled = false
     },
 
-    -- Disable background colors for headers, too distracting
+    -- Disable header styling, too distracting
     heading = {
-      backgrounds = {}
+      enabled = false
     },
 
     code = {
