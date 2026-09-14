@@ -6,3 +6,5 @@
 .bundle
 zzz-mk
 .idea
+
+**/.claude/settings.local.json
