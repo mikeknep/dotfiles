@@ -1,4 +1,4 @@
 bump() {
-  brew bundle --cleanup --file $HOME/dotfiles/Brewfile
+  brew bundle --file $HOME/dotfiles/Brewfile
   rustup update
 }
